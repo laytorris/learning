@@ -18,7 +18,6 @@ C:\Projects\Стажировка\FinalService\FinalService\obj\Debug\FinalServic
 C:\Users\Алсу\Documents\GitHub\learning\FinalService\bin\FinalService.dll.config
 C:\Users\Алсу\Documents\GitHub\learning\FinalService\bin\FinalService.dll
 C:\Users\Алсу\Documents\GitHub\learning\FinalService\bin\FinalService.pdb
-C:\Users\Алсу\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
 C:\Users\Алсу\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.dll
 C:\Users\Алсу\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.pdb
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\FinalService.dll.config

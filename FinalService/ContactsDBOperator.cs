@@ -64,6 +64,21 @@ namespace FinalService
 
         }
 
+        internal void DeleteContact(string id)
+        {
+            string deleteSqlExpression = "DELETE FROM dbo.Contact WHERE ID = @id";
+
+            using (SqlConnection connection = new SqlConnection(_ConnectionString))
+            {
+                SqlCommand deleteCommand = new SqlCommand(deleteSqlExpression, connection);
+                deleteCommand.Parameters.Add(new SqlParameter("@Id", id));
+
+                connection.Open();
+                deleteCommand.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
         internal Contact GetById(string id)
         {
             if (RowExists(id, "@dbo.Contact"))
@@ -107,7 +122,7 @@ namespace FinalService
             return searchCommand;
         }
 
-        internal List <Contact> GetAll()
+        internal List<Contact> GetAll()
         {
             string searchExpression = "SELECT * from dbo.Contact";
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
@@ -133,11 +148,11 @@ namespace FinalService
                         return null;
                     }
                 };
-               
-               
+
+
             }
 
-           
+
         }
 
         internal List<Organization> GetOrgList()
@@ -171,23 +186,8 @@ namespace FinalService
             }
         }
 
-        public void DeleteRow(int id, string tableName)
-        {
-            string deleteSqlExpression = "DELETE FROM @tableName WHERE ID = @id";
 
-            using (SqlConnection connection = new SqlConnection(_ConnectionString))
-            {
-                SqlCommand deleteCommand = new SqlCommand(deleteSqlExpression, connection);
-                deleteCommand.Parameters.Add(new SqlParameter("@Id", id));
-                deleteCommand.Parameters.Add(new SqlParameter("@tableName", tableName));
-                connection.Open();
-                deleteCommand.ExecuteNonQuery();
-                connection.Close();
-            }
 
-        }
-
-      
 
         //public SqlDataReader ContactsSearch(string name, string surname)
         //{
@@ -201,8 +201,8 @@ namespace FinalService
         //        return searchCommand.ExecuteReader();
         //    }
         //}
-    
-    
+
+
 
 
         private SqlCommand FillCommandParameters(string SQLExpression, SqlConnection connection, Contact newcontact)
@@ -241,8 +241,8 @@ namespace FinalService
             }
 
             return insertCommand;
-
         }
+
         private SqlCommand FillCommandParameters(string SQLExpression, SqlConnection connection, Contact newcontact, int id)
         {
             SqlCommand command = FillCommandParameters(SQLExpression, connection, newcontact);

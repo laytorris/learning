@@ -2,13 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.ServiceModel.Web;
-using System.Text;
 using System.Web.Script.Serialization;
 
 namespace FinalService
@@ -50,25 +47,26 @@ namespace FinalService
             }
             else
             {
-                throw new Exception("Contact doesn't exist");
+                throw new WebFaultException<string>("Contacts doesn't exist", HttpStatusCode.BadRequest);
             }
         }
 
-        //public void DeleteContact(string id)
-        //{
-        //    string db = ConfigurationManager.AppSettings["DBConnectionString"];
-        //    ContactsDBOperator dBOperator = new ContactsDBOperator(db);
+        [OperationContract]
+        public void DeleteContact(string id)
+        {
+            string db = ConfigurationManager.AppSettings["DBConnectionString"];
+            ContactsDBOperator dBOperator = new ContactsDBOperator(db);
 
-        //    if (dBOperator.RowExists(id, "@dbo.Contact"))
-        //    {
-               
-        //        dBOperator.DeleteContact(id);
-        //    }
-        //    else
-        //    {
-        //        throw new Exception("Contact doesn't exist");
-        //    }
-        //}
+            if (dBOperator.RowExists(id, "@dbo.Contact"))
+            {
+
+                dBOperator.DeleteContact(id);
+            }
+            else
+            {
+                throw new WebFaultException<string>("Contacts doesn't exist", HttpStatusCode.BadRequest);
+            }
+        }
 
         [OperationContract]
         public string GetContact(string  id)
@@ -76,6 +74,7 @@ namespace FinalService
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
             Contact contact = dBOperator.GetById(id);
+
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             string responce = serializer.Serialize(contact);
             return responce;
@@ -87,16 +86,19 @@ namespace FinalService
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
             List<Contact> contacts = dBOperator.GetAll();
+
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             string responce = serializer.Serialize(contacts);
             return responce;
         }
+
         [OperationContract]
         public string GetOrganizationList()
         {
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
             List<Organization> organizations = dBOperator.GetOrgList();
+
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             string responce = serializer.Serialize(organizations);
             return responce;
