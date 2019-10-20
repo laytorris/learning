@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.ServiceModel;
 using Homework1;
 
 namespace FinalService
@@ -24,8 +25,8 @@ namespace FinalService
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
                 SqlCommand insertCommand = FillCommandParameters(insertSQLExpression, connection, newcontact);
-                connection.Open();
-                insertCommand.ExecuteNonQuery();
+                OpenConnection(connection);
+                DoSQLCommand(insertCommand);
                 connection.Close();
             }
 
@@ -40,26 +41,36 @@ namespace FinalService
 
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
-                SqlCommand insertCommand = FillCommandParameters(insertSQLExpression, connection, newcontact, newcontact.ID);
-                connection.Open();
-                insertCommand.ExecuteNonQuery();
+                SqlCommand insertCommand = FillCommandParameters(insertSQLExpression, connection, newcontact);
+                insertCommand.Parameters.Add(new SqlParameter("@id", newcontact.ID));
+                OpenConnection(connection);
+                DoSQLCommand(insertCommand);
                 connection.Close();
             }
 
         }
 
-        internal bool RowExists(string id, string tableName)
+        internal bool RowExists(string id)
         {
             string searchExpression = "SELECT ID FROM dbo.Contact WHERE ID = @id";
 
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
-                SqlCommand searchCommand = FillExistsCommandParameters(searchExpression, connection, id, tableName);
-                connection.Open();
-                SqlDataReader reader = searchCommand.ExecuteReader();
-                bool result = (reader.HasRows) ? true : false;
-                connection.Close();
-                return result;
+                SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
+                searchCommand.Parameters.AddWithValue("id", id);
+                OpenConnection(connection);
+                try
+                {
+                    SqlDataReader reader = searchCommand.ExecuteReader();
+                    bool result = (reader.HasRows) ? true : false;
+                    connection.Close();
+                    return result;
+                }
+                catch (SqlException ex)
+                {
+                    connection.Close();
+                    throw new FaultException<string>(ex.Message, "Ошибка в процессе выполнения запроса к БД");
+                }
             }
 
         }
@@ -72,54 +83,42 @@ namespace FinalService
             {
                 SqlCommand deleteCommand = new SqlCommand(deleteSqlExpression, connection);
                 deleteCommand.Parameters.Add(new SqlParameter("@Id", id));
-
-                connection.Open();
-                deleteCommand.ExecuteNonQuery();
+                OpenConnection(connection);
+                DoSQLCommand(deleteCommand);
                 connection.Close();
             }
         }
 
         internal Contact GetById(string id)
         {
-            if (RowExists(id, "@dbo.Contact"))
+            
+            string searchExpression = "SELECT * from dbo.Contact WHERE ID = @id";
+            using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
-                string searchExpression = "SELECT * from dbo.Contact WHERE ID = @id";
-                using (SqlConnection connection = new SqlConnection(_ConnectionString))
+                SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
+                searchCommand.Parameters.Add(new SqlParameter("@id", id));
+                connection.Open();
+                using (SqlDataReader reader = searchCommand.ExecuteReader())
                 {
-                    SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
-                    searchCommand.Parameters.Add(new SqlParameter("@id", id));
-                    connection.Open();
-                    using (SqlDataReader reader = searchCommand.ExecuteReader())
+                    if (reader.HasRows)
                     {
-                        if (reader.HasRows)
+                        ContactsDataConverter converter = new ContactsDataConverter();
+                        Contact contact = new Contact();
+                        while (reader.Read())
                         {
-                            ContactsDataConverter converter = new ContactsDataConverter();
-                            Contact contact = new Contact();
-                            while (reader.Read())
-                            {
-                                contact = (converter.ContactFromDataReader(reader));
-                            }
-                            connection.Close();
-                            return contact;
+                            contact = (converter.ContactFromDataReader(reader));
                         }
-                        else
-                        {
-                            connection.Close();
-                            return null;
-                        }
-                    };
-                }
+                        connection.Close();
+                        return contact;
+                    }
+                    else
+                    {
+                        connection.Close();
+                        return null;
+                    }
+                };
             }
-            else return null;
-        }
-
-        private SqlCommand FillExistsCommandParameters(string searchExpression, SqlConnection connection,
-            string id, string tableName)
-        {
-            SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
-            searchCommand.Parameters.Add(new SqlParameter("@id", id));
-            //searchCommand.Parameters.Add(new SqlParameter("@tableName", tableName));
-            return searchCommand;
+            
         }
 
         internal List<Contact> GetAll()
@@ -161,7 +160,9 @@ namespace FinalService
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
                 SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
-                connection.Open();
+                
+                OpenConnection(connection); 
+                
                 using (SqlDataReader reader = searchCommand.ExecuteReader())
                 {
                     if (reader.HasRows)
@@ -181,7 +182,6 @@ namespace FinalService
                         return null;
                     }
                 };
-
 
             }
         }
@@ -243,12 +243,29 @@ namespace FinalService
             return insertCommand;
         }
 
-        private SqlCommand FillCommandParameters(string SQLExpression, SqlConnection connection, Contact newcontact, int id)
+        private void DoSQLCommand(SqlCommand command)
         {
-            SqlCommand command = FillCommandParameters(SQLExpression, connection, newcontact);
-            command.Parameters.Add(new SqlParameter("@id", id));
-            return command;
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw new FaultException<string>(ex.Message, "Ошибка в процессе выполнения запроса к БД");
+            }
+        }
 
+        private void OpenConnection(SqlConnection connection)
+        {
+            try
+            {
+                connection.Open();
+            }
+            catch (SqlException ex)
+            {
+                throw new FaultException<string>(ex.Message, "Ошибка подключения к базе данных");
+            }
+            
         }
 
     }

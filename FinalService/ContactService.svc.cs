@@ -1,11 +1,8 @@
 ﻿using Homework1;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
-using System.ServiceModel.Web;
 using System.Web.Script.Serialization;
 
 namespace FinalService
@@ -38,7 +35,7 @@ namespace FinalService
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
 
-            if (dBOperator.RowExists(ID, "@dbo.Contact"))
+            if (dBOperator.RowExists(ID))
             {
                 ContactsDataConverter preparer = new ContactsDataConverter();
                 Contact newContact = preparer.CreateInstance(Name, Surname, MiddleName,
@@ -47,7 +44,7 @@ namespace FinalService
             }
             else
             {
-                throw new WebFaultException<string>("Contacts doesn't exist", HttpStatusCode.BadRequest);
+                throw new FaultException<string>(ID, "Контакт не существует");
             }
         }
 
@@ -57,27 +54,34 @@ namespace FinalService
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
 
-            if (dBOperator.RowExists(id, "@dbo.Contact"))
+            if (dBOperator.RowExists(id))
             {
-
                 dBOperator.DeleteContact(id);
             }
             else
             {
-                throw new WebFaultException<string>("Contacts doesn't exist", HttpStatusCode.BadRequest);
+                throw new FaultException<string>(id, "Контакт не существует");
             }
         }
 
         [OperationContract]
-        public string GetContact(string  id)
+        public string GetContact(string id)
         {
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
-            Contact contact = dBOperator.GetById(id);
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            string responce = serializer.Serialize(contact);
-            return responce;
+            if (dBOperator.RowExists(id))
+            {
+                Contact contact = dBOperator.GetById(id);
+
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                string responce = serializer.Serialize(contact);
+                return responce;
+            }
+            else
+            {
+                throw new FaultException<string>(id, "Контакт не существует");
+            }
         }
 
         [OperationContract]

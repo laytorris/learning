@@ -13,25 +13,20 @@ function LoadFieldsValues(){
             dataType: "json",
             success : this.HandleResponse,
             error: function() {
-                alert('ajax error');
+                alert('Error while loading organizations list');
             }
         })
     }
     this.HandleResponse =  function(response){
         var responseobject = JSON.parse(response.d);
         var jobSelect = document.getElementById('InputJob');
-        // for (let  item in responseobject) {
-          
-        // }
-       responseobject.forEach(function(element) {
+        responseobject.forEach(function(element) {
             console.log(element);
+             $.each(element, function (key, value) {
+                jobSelect.append($('<option></option>').attr('value', key).text(value));
+              })
            });
-        // $.each(responseobject, function (key, value) {
-        //     jobSelect.append($('<option></option>').attr('value', ID).text(Name));
-        //   })
-        //jobSelect.options[jobSelect.options.length] = new Option('Text 1', 'Value1');
     }
-
 }
 
 var dataLoader  = new LoadFieldsValues();
@@ -141,29 +136,28 @@ $(document).ready(function () {
           { name: 'Position', index: 'Position', width: 300 },  
           { name: 'Organization', index: 'Organization', width: 300}  
        ], 
-    //    datatype: function (postdata) {  
-    //       var dataUrl = 'http://localhost/FinalService/Service1.svc/GetData'  
-    //       $.ajax({  
-    //          url: dataUrl,  
-    //          type: "POST",  
-    //          contentType: "application/json; charset=utf-8",  
-    //          dataType: "json",  
-    //          data: JSON.stringify(postdata),  
-    //          success: function (data, st) {  
-    //             if (st == "success" && JSON.parse(data.d.indexOf("_Error_") != 0)) {  
-    //                var grid = $("#divMyGrid")[0];  
-    //                grid.addJSONData(JSON.parse(data.d));  
-    //             }  
-    //          },  
-    //          error: function () {  
-    //             alert("Error while processing your request");  
-    //          }  
-    //       });  
-    //    },  
-       sortname: 'id', //the column according to which data is to be sorted(optional)  
-       viewrecords: true, //if true, displays the total number of records, etc. as: "View X to Y out of Z” (optional)  
-       sortorder: "asc", //sort order(optional)  
-       caption: "Контакты", //Sets the caption for the grid. If this parameter is not set the Caption layer will be not visible  
+       datatype: function (postdata) {  
+          var dataUrl = 'http://localhost/FinalService/ContactService.svc/GetAllContacts'  
+          $.ajax({  
+             url: dataUrl,  
+             type: "POST",  
+             contentType: "application/json; charset=utf-8",  
+             dataType: "json",  
+             success: function (data, st) {  
+                if (st == "success" && JSON.parse(data.d.indexOf("_Error_") != 0)) {  
+                   var grid = $("#divMyGrid")[0];  
+                   grid.addJSONData(JSON.parse(data.d));  
+                }  
+             },  
+             error: function () {  
+                alert("Error while getting contacts list");  
+             }  
+          });  
+       },  
+       sortname: 'id',
+       viewrecords: true, 
+       sortorder: "asc", 
+       caption: "Контакты",
        multiselect: true,  
        rowNum: 20,  
        loadonce: false,  
@@ -183,7 +177,13 @@ $(document).ready(function () {
             data: JSON.stringify(this.GetFormData()),
             processData: false,
             contentType: "application/json; charset=utf-8",
-            dataType: "json"
+            dataType: "json",
+            success : function() {
+                alert('Contact added');
+            },
+            error: function(responce) {
+            var responseobject = JSON.parse(response.d);
+            }
         })
     }
     this.UpdateContact = function(){

@@ -27,3 +27,9 @@ C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalServi
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.pdb
 E:\Новая папка (2)\learning — копия (2)\FinalService\obj\Debug\FinalService.dll
 E:\Новая папка (2)\learning — копия (2)\FinalService\obj\Debug\FinalService.pdb
+C:\learning\FinalService\obj\Debug\FinalService.dll
+C:\learning\FinalService\obj\Debug\FinalService.pdb
+C:\learning\FinalService\bin\FinalService.dll.config
+C:\learning\FinalService\bin\FinalService.dll
+C:\learning\FinalService\bin\FinalService.pdb
+C:\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
