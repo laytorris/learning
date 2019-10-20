@@ -1,0 +1,62 @@
+.block-invisible{
+	display: none;
+}
+.block-visible{
+	display: block;
+}
+
+.formLabel{
+margin: 10px;
+display: inline-block;
+width: 15%;
+font-size: 18px;
+font-family: sans-serif;
+color:#2F4F4F;
+font-weight: 400;
+border-color: #6495ED;
+}
+
+.btn{
+	width: 15%;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-left: 17.5%;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	background-color:#4682B4;
+	font-size: 18px;
+	font-family: sans-serif;
+	color:white;
+	
+}
+
+.form-control {
+	display: inline-block;
+	width: 20%;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+
+.incorrect-field-data{
+	border-color: red;
+}
+
+.correct-field-data{
+	border-color: #6495ED;
+}
+.form-group{
+	margin: 15px;
+}
+

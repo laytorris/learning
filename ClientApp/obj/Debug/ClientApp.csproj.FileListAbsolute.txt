@@ -1,0 +1,59 @@
+A:\Стажировка\FinalService\ClientApp\bin\Debug\ClientApp.exe.config
+A:\Стажировка\FinalService\ClientApp\bin\Debug\ClientApp.exe
+A:\Стажировка\FinalService\ClientApp\bin\Debug\ClientApp.pdb
+A:\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+A:\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.csproj.CoreCompileInputs.cache
+A:\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.exe
+A:\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.pdb
+A:\Стажировка\FinalService\ClientApp\bin\Debug\Contact.dll
+A:\Стажировка\FinalService\ClientApp\bin\Debug\Newtonsoft.Json.dll
+A:\Стажировка\FinalService\ClientApp\bin\Debug\Contact.pdb
+A:\Стажировка\FinalService\ClientApp\bin\Debug\Newtonsoft.Json.xml
+A:\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\ClientApp.exe.config
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\ClientApp.exe
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\ClientApp.pdb
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+C:\Projects\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.exe
+C:\Projects\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.pdb
+C:\Projects\Стажировка\FinalService\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\FinalService.dll
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\FinalService.pdb
+C:\Projects\Стажировка\FinalService\ClientApp\bin\Debug\FinalService.dll.config
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\ClientApp.exe.config
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\ClientApp.exe
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\ClientApp.pdb
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\FinalService.dll
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\FinalService.pdb
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\FinalService.dll.config
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.exe
+C:\Users\Алсу\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.pdb
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\ClientApp.exe.config
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\ClientApp.exe
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\ClientApp.pdb
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\FinalService.dll
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\FinalService.pdb
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\FinalService.dll.config
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.csprojAssemblyReference.cache
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.exe
+C:\Users\anotfullina\Documents\GitHub\learning\ClientApp\obj\Debug\ClientApp.pdb
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\ClientApp.exe.config
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\ClientApp.exe
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\ClientApp.pdb
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\FinalService.dll
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\Newtonsoft.Json.dll
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\FinalService.pdb
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\FinalService.dll.config
+E:\Новая папка (2)\learning — копия (2)\ClientApp\bin\Debug\Newtonsoft.Json.xml
+E:\Новая папка (2)\learning — копия (2)\ClientApp\obj\Debug\ClientApp.csproj.CopyComplete
+E:\Новая папка (2)\learning — копия (2)\ClientApp\obj\Debug\ClientApp.exe
+E:\Новая папка (2)\learning — копия (2)\ClientApp\obj\Debug\ClientApp.pdb

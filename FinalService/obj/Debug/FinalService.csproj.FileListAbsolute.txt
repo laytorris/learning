@@ -1,0 +1,30 @@
+A:\Стажировка\FinalService\FinalService\bin\FinalService.dll.config
+A:\Стажировка\FinalService\FinalService\bin\FinalService.dll
+A:\Стажировка\FinalService\FinalService\bin\FinalService.pdb
+A:\Стажировка\FinalService\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
+A:\Стажировка\FinalService\FinalService\obj\Debug\FinalService.csproj.CoreCompileInputs.cache
+A:\Стажировка\FinalService\FinalService\obj\Debug\FinalService.dll
+A:\Стажировка\FinalService\FinalService\obj\Debug\FinalService.pdb
+A:\Стажировка\FinalService\FinalService\bin\Contact.dll
+A:\Стажировка\FinalService\FinalService\bin\Contact.pdb
+A:\Стажировка\FinalService\FinalService\obj\Debug\FinalService.csproj.CopyComplete
+C:\Projects\Стажировка\FinalService\FinalService\bin\FinalService.dll.config
+C:\Projects\Стажировка\FinalService\FinalService\bin\FinalService.dll
+C:\Projects\Стажировка\FinalService\FinalService\bin\FinalService.pdb
+C:\Projects\Стажировка\FinalService\FinalService\obj\Debug\FinalService.csproj.CopyComplete
+C:\Projects\Стажировка\FinalService\FinalService\obj\Debug\FinalService.dll
+C:\Projects\Стажировка\FinalService\FinalService\obj\Debug\FinalService.pdb
+C:\Projects\Стажировка\FinalService\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
+C:\Users\Алсу\Documents\GitHub\learning\FinalService\bin\FinalService.dll.config
+C:\Users\Алсу\Documents\GitHub\learning\FinalService\bin\FinalService.dll
+C:\Users\Алсу\Documents\GitHub\learning\FinalService\bin\FinalService.pdb
+C:\Users\Алсу\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
+C:\Users\Алсу\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.dll
+C:\Users\Алсу\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.pdb
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\FinalService.dll.config
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\FinalService.dll
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\FinalService.pdb
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.dll
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.pdb
+E:\Новая папка (2)\learning — копия (2)\FinalService\obj\Debug\FinalService.dll
+E:\Новая папка (2)\learning — копия (2)\FinalService\obj\Debug\FinalService.pdb
