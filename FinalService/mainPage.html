@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+	 <head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.14.0/css/ui.jqgrid.min.css">
+		 <link rel="stylesheet" href="css/styles.css" >
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.14.0/jquery.jqgrid.min.js"></script>
+		 <script src="js/scriptForMainPage.js"></script>
+	 </head>
+	 <body>
+	
+	 	<div class = "container">
+				<h2>Таблица контактов</h2>
+					<input type="button"  onclick="PageActions.OpenCreatingPage()" value="Add new"></input>
+					<input type="button"  onclick="PageActions.OpenEditPage()" value="Edit">
+					<input type="button"  onclick="PageActions.DeleteContact()" value="Delete">
+				<table id="list"></table>	
+		 </div>
+	</body>
+</html>

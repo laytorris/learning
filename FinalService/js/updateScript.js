@@ -1,42 +1,62 @@
 $( document ).ready(function() {
-    dataLoader.LoadContactFields(5);
+    var urlString = window.location.href;
+    var url = new URL(urlString);
+    window.ContactID=url.searchParams.get("ContactID");
+    dataLoader.LoadOrganizationList();
+    dataLoader.LoadContactFields(window.ContactID);
 });
 
 function LoadFieldsValues(){
+ 
+    this.LoadOrganizationList = function(){
+        $.ajax({
+            type: "POST",
+            url: "ContactService.svc/GetOrganizationList",
+            processData: false,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success : this.AddOrgList,
+            error: function(response) {
+                alert(response.responseJSON.Message);
+            }
+        })
+    }
+
+    this.AddOrgList =  function(response){
+        var responseobject = JSON.parse(response.d);
+        var jobSelect = document.getElementById('InputJob');
+        responseobject.forEach(function(element) {
+            jobSelect.append(new Option(element.Name, element.ID, false, false));
+           });
+    }
 
     this.LoadContactFields = function(ContactID){
         $.ajax({
             type: "POST",
-            url:  "http://localhost/FinalService/ContactService.svc/GetContact",
+            url:  "ContactService.svc/GetContact",
             data: JSON.stringify({ id: ContactID }),
             processData: false,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            success : this.HandleResponse,
-            error: function() {
-                alert('ajax error');
+            success : this.SetFieldsValues,
+            error: function(response) {
+                alert(response.responseJSON.Message);
             }
         })
     }
-    
-    this.LoadOrganizationList= function(){
-        $.get("http://localhost/FinalService/ContactService.svc/GetOrganizationList", 
-         function (data, textStatus, jqXHR) {  
-          alert('status: ' + textStatus + ', data:' + data);
-        });
-    }
-    this.HandleResponse =  function(response){
+   
+    this.SetFieldsValues =  function(response){
         var responseobject = JSON.parse(response.d);
         contactID = responseobject.ID;
         document.getElementById("InputName").value = responseobject.Name;
         document.getElementById("InputSurname").value= responseobject.Surname;
         document.getElementById("InputMiddleName").value= responseobject.MiddleName;
         document.getElementById("InputGender").value= responseobject.Gender;
-        // document.getElementById("InputBirthdate").value= JSON.parse(responseobject.BirthDate.Date); 
+        document.getElementById("InputBirthdate").value= responseobject.BirthDate; 
         document.getElementById("InputPhone").value= responseobject.Phone;
         document.getElementById("InputTaxnumber").value= responseobject.TaxNumber;
         document.getElementById("InputPosition").value= responseobject.Position;
-        document.getElementById("InputJob").value= responseobject.Job.Id;
+        document.getElementById("InputJob").value= responseobject.Job.ID;
     }
 
 }
@@ -131,62 +151,12 @@ function ColorChanger(){
     }
 }
 var colorChanger = new ColorChanger();
-
-$(document).ready(function () {  
-    $("#list").jqGrid({  
-       ajaxGridOptions: { contentType: 'application/json; charset=utf-8' },  
-       prmNames: {  
-          rows: "numRows",  
-          page: "pageNumber"  
-       },  
-       colNames: ['Имя', 'Фамилия', 'Дата рождения', 'ИНН', 'Должность', 'Место работы'],
-       colModel: [  
-          { name: 'Name', index: 'Name', width: 400 },  
-          { name: 'Surname', index: 'Surname', width: 400 },  
-          { name: 'BirthDate', index: 'BirthDate', width: 200}, 
-          { name: 'TaxNumber', index: 'TaxNumber', width: 200 },  
-          { name: 'Position', index: 'Position', width: 300 },  
-          { name: 'Organization', index: 'Organization', width: 300}  
-       ], 
-    //    datatype: function (postdata) {  
-    //       var dataUrl = 'http://localhost/FinalService/Service1.svc/GetData'  
-    //       $.ajax({  
-    //          url: dataUrl,  
-    //          type: "POST",  
-    //          contentType: "application/json; charset=utf-8",  
-    //          dataType: "json",  
-    //          data: JSON.stringify(postdata),  
-    //          success: function (data, st) {  
-    //             if (st == "success" && JSON.parse(data.d.indexOf("_Error_") != 0)) {  
-    //                var grid = $("#divMyGrid")[0];  
-    //                grid.addJSONData(JSON.parse(data.d));  
-    //             }  
-    //          },  
-    //          error: function () {  
-    //             alert("Error while processing your request");  
-    //          }  
-    //       });  
-    //    },  
-       sortname: 'id', //the column according to which data is to be sorted(optional)  
-       viewrecords: true, //if true, displays the total number of records, etc. as: "View X to Y out of Z” (optional)  
-       sortorder: "asc", //sort order(optional)  
-       caption: "Контакты", //Sets the caption for the grid. If this parameter is not set the Caption layer will be not visible  
-       multiselect: true,  
-       rowNum: 20,  
-       loadonce: false,  
-       autowidth: true,  
-       shrinkToFit: true,  
-       height: '100%',  
-       rowList: [10, 20, 30, 50, 100],  
-       sortable: true  
-    }).navGrid("#divPaging", { search: true, edit: false, add: false, del: false }, {}, {}, {}, { multipleSearch: false });  
- });   
-
+  
  function ServiceCaller(){
     this.SentNewContact = function(){
         $.ajax({
             type: "POST",
-            url:  "http://localhost/FinalService/ContactService.svc/InsertContact",
+            url:  "ContactService.svc/InsertContact",
             data: JSON.stringify(this.GetFormData()),
             processData: false,
             contentType: "application/json; charset=utf-8",
@@ -196,11 +166,33 @@ $(document).ready(function () {
     this.UpdateContact = function(){
         $.ajax({
             type: "POST",
-            url:  "http://localhost/FinalService/ContactService.svc/UpdateContact",
+            url:  "ContactService.svc/UpdateContact",
             data: JSON.stringify(this.GetFormData()),
             processData: false,
             contentType: "application/json; charset=utf-8",
-            dataType: "json"
+            dataType: "json",
+            success : function() {
+                alert('Contact edited');
+            },
+            error: function(response) {
+                alert(response.responseJSON.Message);
+            }
+        })
+    }
+    this.DeleteContact = function(id){
+        $.ajax({
+            type: "POST",
+            url:  "ContactService.svc/DeleteContact",
+            data: {ID:id},
+            processData: false,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success : function() {
+                alert('Contact deleted');
+            },
+            error: function(response) {
+                alert(response.responseJSON.Message);
+            }
         })
     }
     this.GetFormData = function(){
@@ -214,7 +206,8 @@ $(document).ready(function () {
             Phone: document.getElementById("InputPhone").value, 
             TaxNumber: document.getElementById("InputTaxnumber").value, 
             Position: document.getElementById("InputPosition").value,
-            JobID: document.getElementById("InputJob").value
+            JobID: document.getElementById("InputJob").value, 
+            ID: window.ContactID
         }
         return bodyArray
     }

@@ -33,3 +33,7 @@ C:\learning\FinalService\bin\FinalService.dll.config
 C:\learning\FinalService\bin\FinalService.dll
 C:\learning\FinalService\bin\FinalService.pdb
 C:\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\Newtonsoft.Json.dll
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\Newtonsoft.Json.xml
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csproj.CopyComplete
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache

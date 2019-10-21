@@ -37,7 +37,7 @@ namespace FinalService
                 "Name = @name, Surname = @surname, MiddleName = @middlename, " +
                 "Gender = @gender, BirthDate = @birthdate, Phone = @phone, " +
                 "TaxNumber = @taxnumber, Position = @position, OrganizationID = @organizationid" +
-                "WHERE ID = @id";
+                " WHERE ID = @id";
 
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
@@ -57,7 +57,7 @@ namespace FinalService
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
                 SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
-                searchCommand.Parameters.AddWithValue("id", id);
+                searchCommand.Parameters.AddWithValue("@id", id);
                 OpenConnection(connection);
                 try
                 {
@@ -87,6 +87,38 @@ namespace FinalService
                 DoSQLCommand(deleteCommand);
                 connection.Close();
             }
+        }
+
+        internal Organization GetOrganizationByID(int id)
+        {
+
+            string searchExpression = "SELECT * from dbo.Organization WHERE ID = @id";
+            using (SqlConnection connection = new SqlConnection(_ConnectionString))
+            {
+                SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
+                searchCommand.Parameters.Add(new SqlParameter("@id", id));
+                connection.Open();
+                using (SqlDataReader reader = searchCommand.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        ContactsDataConverter converter = new ContactsDataConverter();
+                        Organization organization = new Organization();
+                        while (reader.Read())
+                        {
+                            organization = (converter.OrganizationFromDataReader(reader));
+                        }
+                        connection.Close();
+                        return organization;
+                    }
+                    else
+                    {
+                        connection.Close();
+                        return null;
+                    }
+                };
+            }
+
         }
 
         internal Contact GetById(string id)

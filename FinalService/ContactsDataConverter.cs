@@ -1,5 +1,6 @@
 ﻿using Homework1;
 using System;
+using System.Configuration;
 using System.Data.SqlClient;
 
 namespace FinalService
@@ -36,6 +37,17 @@ namespace FinalService
             return newContact;
         }
 
+        public Contact CreateInstance(string Name, string Surname, string MiddleName,
+                string Gender, string BirthDate, string Phone, string TaxNumber,
+                string Position, string JobID, string ID)
+        {
+            Contact result = CreateInstance(Name, Surname, MiddleName, Gender, BirthDate, Phone, TaxNumber,
+                 Position, JobID);
+            result.ID = Convert.ToInt32(ID);
+            return result;
+
+        }
+
         internal Contact ContactFromDataReader(SqlDataReader reader)
         {
             Contact result = new Contact();
@@ -60,10 +72,11 @@ namespace FinalService
             result.Position = (string)FieldByName(reader, "Position");
             result.Position.Replace(" ", String.Empty);
             var JobID = (FieldByName(reader, "OrganizationID"));
+            
             if ((JobID!= null)&&(JobID != DBNull.Value)){
-                Organization job = new Organization();
-                job.ID = (int)JobID;
-                job.Name = "random";
+
+                ContactsDBOperator dbOperator = new ContactsDBOperator(ConfigurationManager.AppSettings["DBConnectionString"]);
+                Organization job = dbOperator.GetOrganizationByID((int)JobID);
                 result.Job = job;
             }
             return result;

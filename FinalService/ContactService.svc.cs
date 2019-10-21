@@ -1,4 +1,5 @@
 ﻿using Homework1;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Configuration;
 using System.ServiceModel;
@@ -39,7 +40,7 @@ namespace FinalService
             {
                 ContactsDataConverter preparer = new ContactsDataConverter();
                 Contact newContact = preparer.CreateInstance(Name, Surname, MiddleName,
-                    Gender, BirthDate, Phone, TaxNumber, Position, JobID);
+                    Gender, BirthDate, Phone, TaxNumber, Position, JobID, ID);
                 dBOperator.UpdateContact(newContact);
             }
             else
@@ -74,8 +75,9 @@ namespace FinalService
             {
                 Contact contact = dBOperator.GetById(id);
 
-                JavaScriptSerializer serializer = new JavaScriptSerializer();
-                string responce = serializer.Serialize(contact);
+                JsonSerializerSettings settings = new JsonSerializerSettings();
+                settings.DateFormatString = "yyyy-MM-dd";
+                string responce = JsonConvert.SerializeObject(contact, settings);
                 return responce;
             }
             else
@@ -90,9 +92,9 @@ namespace FinalService
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
             List<Contact> contacts = dBOperator.GetAll();
-
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            string responce = serializer.Serialize(contacts);
+            JsonSerializerSettings settings = new JsonSerializerSettings();
+            settings.DateFormatString = "d MMMM, yyyy";
+            string responce = JsonConvert.SerializeObject(contacts, settings) ;
             return responce;
         }
 
@@ -103,8 +105,9 @@ namespace FinalService
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
             List<Organization> organizations = dBOperator.GetOrgList();
 
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            string responce = serializer.Serialize(organizations);
+            JsonSerializerSettings settings = new JsonSerializerSettings();
+            settings.DateFormatString = "d MMMM, yyyy";
+            string responce = JsonConvert.SerializeObject(organizations, settings);
             return responce;
         }
     }

@@ -7,13 +7,13 @@ function LoadFieldsValues(){
     this.LoadOrganizationList = function(){
         $.ajax({
             type: "POST",
-            url:  "http://localhost/FinalService/ContactService.svc/GetOrganizationList",
+            url:  "ContactService.svc/GetOrganizationList",
             processData: false,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success : this.HandleResponse,
-            error: function() {
-                alert('Error while loading organizations list');
+            error: function(response) {
+                alert(response.responseJSON.Message);
             }
         })
     }
@@ -21,10 +21,7 @@ function LoadFieldsValues(){
         var responseobject = JSON.parse(response.d);
         var jobSelect = document.getElementById('InputJob');
         responseobject.forEach(function(element) {
-            console.log(element);
-             $.each(element, function (key, value) {
-                jobSelect.append($('<option></option>').attr('value', key).text(value));
-              })
+            jobSelect.append(new Option(element.Name, element.ID, false, false));
            });
     }
 }
@@ -120,60 +117,12 @@ function ColorChanger(){
 }
 var colorChanger = new ColorChanger();
 
-$(document).ready(function () {  
-    $("#list").jqGrid({  
-       ajaxGridOptions: { contentType: 'application/json; charset=utf-8' },  
-       prmNames: {  
-          rows: "numRows",  
-          page: "pageNumber"  
-       },  
-       colNames: ['Имя', 'Фамилия', 'Дата рождения', 'ИНН', 'Должность', 'Место работы'],
-       colModel: [  
-          { name: 'Name', index: 'Name', width: 400 },  
-          { name: 'Surname', index: 'Surname', width: 400 },  
-          { name: 'BirthDate', index: 'BirthDate', width: 200}, 
-          { name: 'TaxNumber', index: 'TaxNumber', width: 200 },  
-          { name: 'Position', index: 'Position', width: 300 },  
-          { name: 'Organization', index: 'Organization', width: 300}  
-       ], 
-       datatype: function (postdata) {  
-          var dataUrl = 'http://localhost/FinalService/ContactService.svc/GetAllContacts'  
-          $.ajax({  
-             url: dataUrl,  
-             type: "POST",  
-             contentType: "application/json; charset=utf-8",  
-             dataType: "json",  
-             success: function (data, st) {  
-                if (st == "success" && JSON.parse(data.d.indexOf("_Error_") != 0)) {  
-                   var grid = $("#divMyGrid")[0];  
-                   grid.addJSONData(JSON.parse(data.d));  
-                }  
-             },  
-             error: function () {  
-                alert("Error while getting contacts list");  
-             }  
-          });  
-       },  
-       sortname: 'id',
-       viewrecords: true, 
-       sortorder: "asc", 
-       caption: "Контакты",
-       multiselect: true,  
-       rowNum: 20,  
-       loadonce: false,  
-       autowidth: true,  
-       shrinkToFit: true,  
-       height: '100%',  
-       rowList: [10, 20, 30, 50, 100],  
-       sortable: true  
-    }).navGrid("#divPaging", { search: true, edit: false, add: false, del: false }, {}, {}, {}, { multipleSearch: false });  
- });   
 
  function ServiceCaller(){
     this.SentNewContact = function(){
         $.ajax({
             type: "POST",
-            url:  "http://localhost/FinalService/ContactService.svc/InsertContact",
+            url:  "ContactService.svc/InsertContact",
             data: JSON.stringify(this.GetFormData()),
             processData: false,
             contentType: "application/json; charset=utf-8",
@@ -181,19 +130,25 @@ $(document).ready(function () {
             success : function() {
                 alert('Contact added');
             },
-            error: function(responce) {
-            var responseobject = JSON.parse(response.d);
+            error: function(response) {
+                alert(response.responseJSON.Message);
             }
         })
     }
     this.UpdateContact = function(){
         $.ajax({
             type: "POST",
-            url:  "http://localhost/FinalService/ContactService.svc/UpdateContact",
+            url:  "ContactService.svc/UpdateContact",
             data: JSON.stringify(this.GetFormData()),
             processData: false,
             contentType: "application/json; charset=utf-8",
-            dataType: "json"
+            dataType: "json",
+            success : function() {
+                alert('Contact edited');
+            },
+            error: function(response) {
+                alert(response.responseJSON.Message);
+            }
         })
     }
     this.GetFormData = function(){
@@ -213,4 +168,11 @@ $(document).ready(function () {
     
 }
 var ServiceCaller= new ServiceCaller();
+
+function OpenPage(){
+    this.OpenCreatingPage = function(){
+        window.open("index.html","_self");
+    }
+}
+var PageLinker = new OpenPage();
      
