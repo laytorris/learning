@@ -21,6 +21,10 @@ namespace FinalService
                 string Gender, string BirthDate, string Phone, string TaxNumber,
                 string Position, string JobID)
         {
+              Logger.Log.Info($"InsertContact got params: name = {Name}, surname = {Surname}, " +
+                $"middlename = {MiddleName},gender = { Gender}, birthday = {BirthDate}, phone = {Phone}," +
+                $" taxnumber = {TaxNumber}, position = {Position}, jobid = {JobID}");
+            
             ContactsDataConverter preparer = new ContactsDataConverter();
             Contact newContact = preparer.CreateInstance(Name, Surname, MiddleName,
                 Gender, BirthDate, Phone, TaxNumber, Position, JobID);
@@ -35,6 +39,9 @@ namespace FinalService
                 string Gender, string BirthDate, string Phone, string TaxNumber,
                 string Position, string JobID)
         {
+            Logger.Log.Info($"UpdateContact got params: id = {ID}, name = {Name}, surname = {Surname}, " +
+               $"middlename = {MiddleName},gender = { Gender}, birthday = {BirthDate}, phone = {Phone}," +
+               $" taxnumber = {TaxNumber}, position = {Position}, jobid = {JobID}");
 
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
