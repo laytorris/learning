@@ -1,6 +1,18 @@
-$( document ).ready(function() {
-    dataLoader.LoadOrganizationList();
-});
+var dialog;
+$(document).ready(function () {  
+    PageActions.LoadGridData();
+    document.getElementById("showAllButton").classList.add("btn-hidden");
+    dialog =  document.getElementById("showAllButton").dialog({
+        uiLibrary: 'bootstrap4',
+        iconsLibrary: 'fontawesome',
+        autoOpen: false,
+        resizable: false,
+        modal: true
+    });
+    var dataUrl = 'ContactService.svc/GetAllContacts';
+    PageActions.FillGrid(dataUrl); 
+   
+  });   
 
 function LoadFieldsValues(){
 
@@ -11,18 +23,45 @@ function LoadFieldsValues(){
             processData: false,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            success : this.HandleResponse,
+            success : function(response){
+                var responseobject = JSON.parse(response.d);
+                var jobSelect = document.getElementById('InputJob');
+                responseobject.forEach(function(element) {
+                    jobSelect.append(new Option(element.Name, element.ID, false, false));
+                   });
+            },
             error: function(response) {
                 alert(response.responseJSON.Message);
             }
         })
     }
-    this.HandleResponse =  function(response){
+    this.LoadContactFields = function(ContactID){
+        $.ajax({
+            type: "POST",
+            url:  "ContactService.svc/GetContact",
+            data: JSON.stringify({ id: ContactID }),
+            processData: false,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success : this.SetFieldsValues,
+            error: function(response) {
+                alert(response.responseJSON.Message);
+            }
+        })
+    }
+   
+    this.SetFieldsValues =  function(response){
         var responseobject = JSON.parse(response.d);
-        var jobSelect = document.getElementById('InputJob');
-        responseobject.forEach(function(element) {
-            jobSelect.append(new Option(element.Name, element.ID, false, false));
-           });
+        contactID = responseobject.ID;
+        document.getElementById("InputName").value = responseobject.Name;
+        document.getElementById("InputSurname").value= responseobject.Surname;
+        document.getElementById("InputMiddleName").value= responseobject.MiddleName;
+        document.getElementById("InputGender").value= responseobject.Gender;
+        document.getElementById("InputBirthdate").value= responseobject.BirthDate; 
+        document.getElementById("InputPhone").value= responseobject.Phone;
+        document.getElementById("InputTaxnumber").value= responseobject.TaxNumber;
+        document.getElementById("InputPosition").value= responseobject.Position;
+        document.getElementById("InputJob").value= responseobject.Job.ID;
     }
 }
 
@@ -118,7 +157,7 @@ function ColorChanger(){
 var colorChanger = new ColorChanger();
 
 
- function ServiceCaller(){
+function ContactsActions(){
     this.SentNewContact = function(){
         $.ajax({
             type: "POST",
@@ -135,6 +174,7 @@ var colorChanger = new ColorChanger();
             }
         })
     }
+
     this.UpdateContact = function(){
         $.ajax({
             type: "POST",
@@ -151,6 +191,34 @@ var colorChanger = new ColorChanger();
             }
         })
     }
+
+    this.DeleteContact= function(){
+        if (window.SelectedRowID != undefined){
+           if(confirm("Вы уверены, что хотите удалить выбранную строку?")){ 
+           $.ajax({
+              type: "POST",
+              url:  "ContactService.svc/DeleteContact",
+              data: JSON.stringify({id:window.SelectedRowID}),
+              processData: false,
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success : function() {
+                  alert('Contact deleted');
+                  var dataUrl = 'ContactService.svc/GetAllContacts';
+                  PageActions.ReloadGrid(dataUrl); 
+              },
+              error: function(response) {
+                  alert(response.responseJSON.Message);
+              }
+              })
+            }
+           }
+            else{
+               alert ("Строка не выбрана");
+            }
+     
+        }
+
     this.GetFormData = function(){
         var bodyArray = {
             Name: document.getElementById("InputName").value,
@@ -161,18 +229,118 @@ var colorChanger = new ColorChanger();
             Phone: document.getElementById("InputPhone").value, 
             TaxNumber: document.getElementById("InputTaxnumber").value, 
             Position: document.getElementById("InputPosition").value,
-            JobID: document.getElementById("InputJob").value
+            JobID: document.getElementById("InputJob").value,
+            ID: window.ContactID
         }
         return bodyArray
     }
     
 }
-var ServiceCaller= new ServiceCaller();
 
-function OpenPage(){
-    this.OpenCreatingPage = function(){
-        window.open("index.html","_self");
+var contactsActions = new ContactsActions();
+
+function MainPageActions(){
+
+    this.FillGrid= function(dataUrl){
+       $.ajax({  
+        url: dataUrl,  
+        type: "POST",  
+        contentType: "application/json; charset=utf-8",  
+        dataType: "json",  
+        success: function (data, st) {  
+           if (st == "success" && JSON.parse(data.d.indexOf("_Error_") != 0)) {  
+              var grid = $("#list")[0];  
+              grid.addJSONData(JSON.parse(data.d));  
+           }  
+        },  
+        error: function () {  
+           alert("Error while getting contacts list");  
+        }  
+     });
     }
-}
-var PageLinker = new OpenPage();
+
+    this.SetDefaultValues = function(){
+        var dataUrl = 'ContactService.svc/GetAllContacts';
+        this.FillGrid(dataUrl); 
+        $("#showAllButton").classList.add("btn-hidden");
+        $("#SearchString").value="";
+    }
+
+    this.LoadGridData =  function(){
+    $("#list").jqGrid({  
+        ajaxGridOptions: { contentType: 'application/json; charset=utf-8' },  
+        prmNames: {  
+            rows: "numRows",  
+            page: "pageNumber"  
+        },  
+        colNames: ['№', 'Имя', 'Фамилия', 'Дата рождения', 'ИНН', 'Должность', 'Место работы'],
+        colModel: [  
+            { name: 'ID', index: 'ID', width: 100, hidden : true},  
+            { name: 'Name', index: 'Name', width: 400 },  
+            { name: 'Surname', index: 'Surname', width: 400 },  
+            { name: 'BirthDate', index: 'BirthDate', width: 200}, 
+            { name: 'TaxNumber', index: 'TaxNumber', width: 200 },  
+            { name: 'Position', index: 'Position', width: 300 },  
+            { name: 'Job.Name', index: 'Organization', width: 300}  
+        ], 
+        sortname: 'Surname',
+        viewrecords: true, 
+        sortorder: "desc", 
+        caption: "Контакты",
+        multiselect: false,  
+        rowNum: 20, 
+        rownumbers: true, 
+        loadonce: false,  
+        autowidth: true,  
+        shrinkToFit: true,  
+        height: '100%',  
+        rowList: [10, 20, 30, 50, 100],  
+        sortable: true, 
+        onSelectRow: function(){ 
+            var rowId = $('#list').jqGrid('getGridParam', 'selrow');
+            var rowData = jQuery("#list").getRowData(rowId);
+            var colData = rowData['ID']; 
+            window.SelectedRowID = colData;
+        },
+    }).navGrid("#divPaging", { search: true, edit: false, add: false, del: false }, {}, {}, {}, { multipleSearch: false });
+    }
+
+    this.OpenAddingBlock = function(){
+        dialog.open();
+    }
+  
+    this.OpenEditBlock = function(){
+        if (window.SelectedRowID != undefined){
+         }
+         else{
+            alert ("Строка не выбрана");
+         }
+    }
+    
+     this.SearchContact =  function(){
+        var str =  $("#SearchString").val();
+        if (str!=""){
+           var dataUrl = 'ContactService.svc/GetContactsByParts';
+           $.ajax({
+              type: "POST",
+              url:  dataUrl,
+              data: JSON.stringify({searchString:str}),
+              processData: false,
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success : function(data, st) {
+                if (st == "success" && JSON.parse(data.d.indexOf("_Error_") != 0)) {  
+                    var grid = $("#list")[0];  
+                    grid.addJSONData(JSON.parse(data.d));  
+                }
+             },
+              error: function(response) {
+                  alert(response.responseJSON.Message);
+              }
+            })
+              document.getElementById("showAllButton").classList.remove('btn-hidden');
+        } 
+     }
+  }
+var PageActions = new MainPageActions();
      
