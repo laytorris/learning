@@ -36,4 +36,5 @@ C:\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\Newtonsoft.Json.dll
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\Newtonsoft.Json.xml
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csproj.CopyComplete
-C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\log4net.dll
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\log4net.xml
