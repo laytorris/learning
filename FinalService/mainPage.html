@@ -13,9 +13,15 @@
 	
 	 	<div class = "container">
 				<h2>Таблица контактов</h2>
-					<input type="button"  onclick="PageActions.OpenCreatingPage()" value="Add new"></input>
-					<input type="button"  onclick="PageActions.OpenEditPage()" value="Edit">
-					<input type="button"  onclick="PageActions.DeleteContact()" value="Delete">
+				<div>
+					<input type="button"  class="btn-small" onclick="PageActions.OpenCreatingPage()" value="Add new"></input>
+					<input type="button"  class="btn-small" onclick="PageActions.OpenEditPage()" value="Edit"></input>
+					<input type="button" class="btn-small" onclick="PageActions.DeleteContact()" value="Delete"></input>
+					<input type="button" id = "showAllButton" class="btn-small  btn-hidden" onclick="PageActions.ReloadGridDefault()()" value="Show all"></input>
+					<input type = "text" placeholder="Фамилия Имя" id = "SearchString"></input>
+					<input type="button"  class="btn-small" onclick="PageActions.SearchContact()" value="Search"></input>
+				</div>
+				<p></p>
 				<table id="list"></table>	
 		 </div>
 	</body>

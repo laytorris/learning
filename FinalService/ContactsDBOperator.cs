@@ -49,6 +49,19 @@ namespace FinalService
             }
 
         }
+        internal void DeleteContact(string id)
+        {
+            string deleteSqlExpression = "DELETE FROM dbo.Contact WHERE ID = @id";
+
+            using (SqlConnection connection = new SqlConnection(_ConnectionString))
+            {
+                SqlCommand deleteCommand = new SqlCommand(deleteSqlExpression, connection);
+                deleteCommand.Parameters.Add(new SqlParameter("@Id", id));
+                OpenConnection(connection);
+                DoSQLCommand(deleteCommand);
+                connection.Close();
+            }
+        }
 
         internal bool RowExists(string id)
         {
@@ -75,19 +88,7 @@ namespace FinalService
 
         }
 
-        internal void DeleteContact(string id)
-        {
-            string deleteSqlExpression = "DELETE FROM dbo.Contact WHERE ID = @id";
-
-            using (SqlConnection connection = new SqlConnection(_ConnectionString))
-            {
-                SqlCommand deleteCommand = new SqlCommand(deleteSqlExpression, connection);
-                deleteCommand.Parameters.Add(new SqlParameter("@Id", id));
-                OpenConnection(connection);
-                DoSQLCommand(deleteCommand);
-                connection.Close();
-            }
-        }
+   
 
         internal Organization GetOrganizationByID(int id)
         {
@@ -119,6 +120,26 @@ namespace FinalService
                 };
             }
 
+        }
+
+        internal List<Contact> GetByNameParts(string [] parameters, bool allowPartialMatch)
+        {
+            string searchExpression = (allowPartialMatch) ?
+                "SELECT * from dbo.Contact WHERE Name LIKE @nameTemplate OR Surname LIKE @surnameTemplate" :
+                "SELECT * from dbo.Contact WHERE Name LIKE @nameTemplate AND Surname LIKE @surnameTemplate";
+            SqlCommand command = new SqlCommand(searchExpression);
+            command.Parameters.AddWithValue("surnameTemplate", "%" + parameters[0] + "%");
+            command.Parameters.AddWithValue("nameTemplate", "%" + parameters[1] + "%");
+            return GetList(command);
+        }
+
+        internal List<Contact> GetByNameParts(string param)
+        {
+            string searchExpression = "SELECT * from dbo.Contact WHERE Name LIKE @nameTemplate or Surname LIKE @surnameTemplate";
+            SqlCommand command = new SqlCommand(searchExpression);
+            command.Parameters.AddWithValue("surnameTemplate", "%"+param+"%");
+            command.Parameters.AddWithValue("nameTemplate", "%" + param + "%");
+            return GetList(command);
         }
 
         internal Contact GetById(string id)
@@ -153,14 +174,13 @@ namespace FinalService
             
         }
 
-        internal List<Contact> GetAll()
+        private List<Contact> GetList(SqlCommand command)
         {
-            string searchExpression = "SELECT * from dbo.Contact";
             using (SqlConnection connection = new SqlConnection(_ConnectionString))
             {
-                SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
+                command.Connection = connection;
                 connection.Open();
-                using (SqlDataReader reader = searchCommand.ExecuteReader())
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
                     if (reader.HasRows)
                     {
@@ -182,8 +202,12 @@ namespace FinalService
 
 
             }
-
-
+        }
+        internal List<Contact> GetAll()
+        {
+            string searchExpression = "SELECT * from dbo.Contact";
+            SqlCommand command = new SqlCommand(searchExpression);
+            return GetList(command);
         }
 
         internal List<Organization> GetOrgList()
@@ -217,25 +241,6 @@ namespace FinalService
 
             }
         }
-
-
-
-
-        //public SqlDataReader ContactsSearch(string name, string surname)
-        //{
-        //    string searchSqlExpression = "SELECT * from dbo.Contact WHERE Name LIKE @namep, Surname LIKE @surnamep ";
-
-        //    using (SqlConnection connection = new SqlConnection(_ConnectionString))
-        //    {
-        //        SqlCommand searchCommand = new SqlCommand(searchSqlExpression, connection);
-        //        searchCommand.Parameters.Add(new SqlParameter("@name", '%' + name + '%'));
-        //        searchCommand.Parameters.Add(new SqlParameter("@surname", '%' + surname + '%'));
-        //        return searchCommand.ExecuteReader();
-        //    }
-        //}
-
-
-
 
         private SqlCommand FillCommandParameters(string SQLExpression, SqlConnection connection, Contact newcontact)
         {

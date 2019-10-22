@@ -12,7 +12,10 @@ namespace FinalService
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class ContactService
     {
-
+        public ContactService()
+        {
+            Logger.InitLogger();
+        }
         [OperationContract]
         public void InsertContact(string Name, string Surname, string MiddleName,
                 string Gender, string BirthDate, string Phone, string TaxNumber,
@@ -95,6 +98,41 @@ namespace FinalService
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.DateFormatString = "d MMMM, yyyy";
             string responce = JsonConvert.SerializeObject(contacts, settings) ;
+            return responce;
+        }
+
+        [OperationContract]
+        public string GetContactsByParts(string searchString)
+        {
+            searchString.Trim(',', ' ');
+
+            string db = ConfigurationManager.AppSettings["DBConnectionString"];
+            ContactsDBOperator dBOperator = new ContactsDBOperator(db);
+
+            List<Contact> contacts;
+
+            string[] parameters;
+            if (searchString.Contains(" "))
+            {
+                //имя и фамилия должны частично соответствовать поиску
+               parameters = searchString.Split(' ');
+               contacts = dBOperator.GetByNameParts(parameters, false);
+            }
+            else if (searchString.Contains(","))
+            {
+                //имя ИЛИ фамилия должны частично соответствовать поиску
+                parameters = searchString.Split(',');
+                contacts = dBOperator.GetByNameParts(parameters, true);
+            }
+            else
+            {
+                //поиск по одной строке
+                contacts = dBOperator.GetByNameParts(searchString);
+             }
+     
+            JsonSerializerSettings settings = new JsonSerializerSettings();
+            settings.DateFormatString = "d MMMM, yyyy";
+            string responce = JsonConvert.SerializeObject(contacts, settings);
             return responce;
         }
 
