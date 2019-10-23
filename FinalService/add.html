@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	 <head>
+		 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.14.0/css/ui.jqgrid.min.css">
+		 <link rel="stylesheet" href="css/styles.css" >
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.14.0/jquery.jqgrid.min.js"></script>
+		 <script src="js/script.js"></script>
+		
+		 <title>Добавление нового контакта</title>
+	 </head>
+	 <body>
+	 	<div class = "container">
+			 	<form>
+				  <div class="form-group">
+				    <label class = "formLabel" for="InputName">Имя</label>
+				    <input type="text" class="form-control correct-field-data" name = "name" required onchange="Validator.ValidateName(this.value)" id="InputName" placeholder="Введите имя">
+				  </div>
+				  <div class="form-group ">
+				    <label class = "formLabel" for="InputSurname">Фамилия</label>
+				    <input type="text" class="form-control correct-field-data"  name = "surname" required onchange="Validator.ValidateSurname(this.value)" id="InputSurname" placeholder="Введите фамилию">
+				  </div>
+				  <div class="form-group ">
+				    <label class = "formLabel" for="InputMiddleName">Отчество</label>
+				    <input type="text" class="form-control correct-field-data"  name = "middlename" onchange="Validator.ValidateMiddleName(this.value)" id="InputMiddleName" placeholder="Введите отчество">
+				  </div>
+				  <div class="form-group ">
+					<label class = "formLabel" for="InputMiddleName">Пол</label>
+				  	<select class = "form-control correct-field-data"  name = "gender" id = "InputGender">
+						<option class = "form-control" value = "m">Мужской</option>
+						<option class = "form-control" value = "f">Женский</option>
+				  	</select>
+				  </div>
+                  <div class="form-group">
+                    <label class = "formLabel" for="InputBirthdate">Дата рождения</label>
+                  	<input class = "form-control correct-field-data" type="date" id="InputBirthdate" name="birthdate"  min="1900-01-01" placeholder="01-01-2000" ><br>
+               		</div>
+                  <div class="form-group ">
+				    <label class = "formLabel" for="InputPhone">Номер телефона</label>
+				    <input type="text" class="form-control correct-field-data"  name = "phone" id="InputPhone" placeholder="Введите номер телефона">
+                  </div>
+                  <div class="form-group">
+				    <label class = "formLabel" for="InputPhone">Налоговый номер</label>
+				    <input type="text" class="form-control correct-field-data"  name = "taxnumber" required  id="InputTaxnumber" placeholder="Введите ИНН">
+				  </div>
+				  <div class="form-group">
+				    <label class = "formLabel" for="InputPhone">Должность</label>
+				    <input type="text" class="form-control correct-field-data" required  name = "position" id="InputPosition" placeholder="Введите должность">
+				  </div>
+				<div class="form-group ">
+					<label class = "formLabel" for="InputJob">Организация</label>
+					<select class = "form-control correct-field-data"  name = "job" id = "InputJob">
+							
+					</select>
+				</div>
+			  	<input type="button" class="btn" onclick="ServiceCaller.SentNewContact()" value="Готово!"></input>
+				</form>	
+		 </div>
+	</body>
+</html>

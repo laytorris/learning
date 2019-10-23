@@ -129,14 +129,14 @@ namespace Homework1
         }
 
         public override string ToString() {
-            return string.Concat(Surname, " ", Name, " ",
+            return string.Concat(ID, " ", Surname, " ", Name, " ",
                 MiddleName, " ", Gender, " ", Phone, " ",
                 BirthDate.ToString(), " ", TaxNumber, " ", Job?.Name, " ", Position);
         }
 
         public string ToString(char delimiter)
         {
-            return string.Concat(Surname, delimiter, Name, delimiter,
+            return string.Concat(ID, delimiter, Surname, delimiter, Name, delimiter,
                 MiddleName, delimiter, Gender, delimiter, Phone, delimiter, 
                 BirthDate.ToString(), delimiter, TaxNumber, delimiter, Job?.Name, delimiter, Position);
         }

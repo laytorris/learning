@@ -27,6 +27,7 @@ namespace FinalService
                 SqlCommand insertCommand = FillCommandParameters(insertSQLExpression, connection, newcontact);
                 OpenConnection(connection);
                 DoSQLCommand(insertCommand);
+                Logger.Log.Info($"New contact inserted, {newcontact.ToString()}");
                 connection.Close();
             }
 
@@ -45,6 +46,7 @@ namespace FinalService
                 insertCommand.Parameters.Add(new SqlParameter("@id", newcontact.ID));
                 OpenConnection(connection);
                 DoSQLCommand(insertCommand);
+                Logger.Log.Info($"Contact updated, {newcontact.ToString()}");
                 connection.Close();
             }
 
@@ -59,6 +61,7 @@ namespace FinalService
                 deleteCommand.Parameters.Add(new SqlParameter("@Id", id));
                 OpenConnection(connection);
                 DoSQLCommand(deleteCommand);
+                Logger.Log.Info($"Contact deleted, ID = {id}");
                 connection.Close();
             }
         }
@@ -82,6 +85,7 @@ namespace FinalService
                 catch (SqlException ex)
                 {
                     connection.Close();
+                    Logger.Log.Info($"SQLCommand failed, {ex.Message}");
                     throw new FaultException<string>(ex.Message, "Ошибка в процессе выполнения запроса к БД");
                 }
             }
@@ -188,13 +192,16 @@ namespace FinalService
                         List<Contact> result = new List<Contact>();
                         while (reader.Read())
                         {
-                            result.Add(converter.ContactFromDataReader(reader));
+                            Contact contact = (converter.ContactFromDataReader(reader));
+                            result.Add(contact);
+                            Logger.Log.Info($" New result row added, {contact.ToString()}");
                         }
                         connection.Close();
                         return result;
                     }
                     else
                     {
+                        Logger.Log.Info($" No results");
                         connection.Close();
                         return null;
                     }
@@ -288,6 +295,7 @@ namespace FinalService
             }
             catch (SqlException ex)
             {
+                Logger.Log.Info($"SQLCommand failed, {ex.Message}");
                 throw new FaultException<string>(ex.Message, "Ошибка в процессе выполнения запроса к БД");
             }
         }
@@ -297,9 +305,11 @@ namespace FinalService
             try
             {
                 connection.Open();
+                Logger.Log.Info($"Connection to db {connection.ConnectionString} established");
             }
             catch (SqlException ex)
             {
+                Logger.Log.Info($"Connection to db {connection.ConnectionString} failed, {ex.Message}");
                 throw new FaultException<string>(ex.Message, "Ошибка подключения к базе данных");
             }
             

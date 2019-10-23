@@ -38,3 +38,4 @@ C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\Newtonsoft.Json.
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csproj.CopyComplete
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\log4net.dll
 C:\Users\anotfullina\Documents\GitHub\learning\FinalService\bin\log4net.xml
+C:\Users\anotfullina\Documents\GitHub\learning\FinalService\obj\Debug\FinalService.csprojAssemblyReference.cache

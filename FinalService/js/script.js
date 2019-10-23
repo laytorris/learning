@@ -1,17 +1,10 @@
-var dialog;
 $(document).ready(function () {  
-    PageActions.LoadGridData();
-    document.getElementById("showAllButton").classList.add("btn-hidden");
-    dialog =  document.getElementById("showAllButton").dialog({
-        uiLibrary: 'bootstrap4',
-        iconsLibrary: 'fontawesome',
-        autoOpen: false,
-        resizable: false,
-        modal: true
-    });
+    PageActions.LoadGridStructure();
+    document.getElementById("showAllButton").classList.add("d-none");
+    document.getElementById("ContactID").classList.add("d-none");
     var dataUrl = 'ContactService.svc/GetAllContacts';
     PageActions.FillGrid(dataUrl); 
-   
+    PageActions.SetListeners();
   });   
 
 function LoadFieldsValues(){
@@ -26,6 +19,7 @@ function LoadFieldsValues(){
             success : function(response){
                 var responseobject = JSON.parse(response.d);
                 var jobSelect = document.getElementById('InputJob');
+                jobSelect.innerHTML="";
                 responseobject.forEach(function(element) {
                     jobSelect.append(new Option(element.Name, element.ID, false, false));
                    });
@@ -52,7 +46,7 @@ function LoadFieldsValues(){
    
     this.SetFieldsValues =  function(response){
         var responseobject = JSON.parse(response.d);
-        contactID = responseobject.ID;
+        document.getElementById("ContactID").value = responseobject.ID;
         document.getElementById("InputName").value = responseobject.Name;
         document.getElementById("InputSurname").value= responseobject.Surname;
         document.getElementById("InputMiddleName").value= responseobject.MiddleName;
@@ -62,6 +56,18 @@ function LoadFieldsValues(){
         document.getElementById("InputTaxnumber").value= responseobject.TaxNumber;
         document.getElementById("InputPosition").value= responseobject.Position;
         document.getElementById("InputJob").value= responseobject.Job.ID;
+    }
+    this.ClearFields =  function() {
+        document.getElementById("ContactID").value ="";
+        document.getElementById("InputName").value ="";
+        document.getElementById("InputSurname").value ="";
+        document.getElementById("InputMiddleName").value="";
+        document.getElementById("InputGender").value="";
+        document.getElementById("InputBirthdate").value=""; 
+        document.getElementById("InputPhone").value="";
+        document.getElementById("InputTaxnumber").value="";
+        document.getElementById("InputPosition").value="";
+        document.getElementById("InputJob").value="";
     }
 }
 
@@ -97,19 +103,21 @@ function ValidateAction(){
             field.value= surname[0].toUpperCase() + surname.slice(1);
         
     }
+    this.ValidateMiddleName = function (middlename){
+        let length = middlename.length;
+            field = document.getElementById("InputMiddleName");
+            if (length>15){
+                colorChanger.ToIncorrectColor(field);
+                console.log("Middlename is incorrect");
+            }
+            else{
+                colorChanger.ToCorrectColor(field);
+            }
+            field.value= middlename[0].toUpperCase() + middlename.slice(1);
+        
+    }
     this.ValidateBirthdate = function(){
-
-            let day =  document.getElementById("birthdateDay");
-            let month =  document.getElementById("birthdateMonth");
-            let year =   document.getElementById("birthdateYear");
-        
-            
-            colorChanger.ToCorrectColor(day);
-            colorChanger.ToCorrectColor(month);
-            colorChanger.ToCorrectColor(year);
-            
-        
-            let birthdate = month.value + "-"+day.value  + "-"+year.value;
+           /* let birthdate = document.getElementById("InputBirthdate").value;
             birthdate = new Date(birthdate);
         
             if (!( !!month.value && !!day.value && !!year.value)){
@@ -138,20 +146,19 @@ function ValidateAction(){
                 }
             }   
     }
+*/
     
 }
-
+}
 var Validator = new ValidateAction();
 
 function ColorChanger(){
     
     this.ToCorrectColor = function(field){
-        field.classList.add('correct-field-data');
-        field.classList.remove('incorrect-field-data');
+        field.classList.remove('border-danger');
     }
     this.ToIncorrectColor = function(field){
-        field.classList.add('incorrect-field-data');
-        field.classList.remove('correct-field-data');
+        field.classList.add('border-danger');
     }
 }
 var colorChanger = new ColorChanger();
@@ -204,8 +211,7 @@ function ContactsActions(){
               dataType: "json",
               success : function() {
                   alert('Contact deleted');
-                  var dataUrl = 'ContactService.svc/GetAllContacts';
-                  PageActions.ReloadGrid(dataUrl); 
+                  PageActions.SetDefaultValues(); 
               },
               error: function(response) {
                   alert(response.responseJSON.Message);
@@ -230,7 +236,7 @@ function ContactsActions(){
             TaxNumber: document.getElementById("InputTaxnumber").value, 
             Position: document.getElementById("InputPosition").value,
             JobID: document.getElementById("InputJob").value,
-            ID: window.ContactID
+            ID: document.getElementById("ContactID").value
         }
         return bodyArray
     }
@@ -241,6 +247,16 @@ var contactsActions = new ContactsActions();
 
 function MainPageActions(){
 
+    this.SetListeners = function(){
+        document.addEventListener('click', function(event) {
+        var specifiedElement = document.getElementById("list");
+        var isClickInside = specifiedElement.contains(event.target);
+        if (!isClickInside) {
+            window.SelectedRowID = undefined;
+         }
+        });
+    }
+      
     this.FillGrid= function(dataUrl){
        $.ajax({  
         url: dataUrl,  
@@ -257,16 +273,17 @@ function MainPageActions(){
            alert("Error while getting contacts list");  
         }  
      });
+
     }
 
     this.SetDefaultValues = function(){
         var dataUrl = 'ContactService.svc/GetAllContacts';
         this.FillGrid(dataUrl); 
-        $("#showAllButton").classList.add("btn-hidden");
-        $("#SearchString").value="";
+        document.getElementById("showAllButton").classList.add("d-none");
+        document.getElementById("SearchString").value="";
     }
 
-    this.LoadGridData =  function(){
+    this.LoadGridStructure =  function(){
     $("#list").jqGrid({  
         ajaxGridOptions: { contentType: 'application/json; charset=utf-8' },  
         prmNames: {  
@@ -276,24 +293,24 @@ function MainPageActions(){
         colNames: ['№', 'Имя', 'Фамилия', 'Дата рождения', 'ИНН', 'Должность', 'Место работы'],
         colModel: [  
             { name: 'ID', index: 'ID', width: 100, hidden : true},  
-            { name: 'Name', index: 'Name', width: 400 },  
-            { name: 'Surname', index: 'Surname', width: 400 },  
-            { name: 'BirthDate', index: 'BirthDate', width: 200}, 
-            { name: 'TaxNumber', index: 'TaxNumber', width: 200 },  
-            { name: 'Position', index: 'Position', width: 300 },  
-            { name: 'Job.Name', index: 'Organization', width: 300}  
+            { label: 'Name', name: 'Name', index: 'Name', width: 300 },  
+            { name: 'Surname', index: 'Surname', width: 300 },  
+            { name: 'BirthDate', index: 'BirthDate', width: 100}, 
+            { name: 'TaxNumber', index: 'TaxNumber', width: 100 },  
+            { name: 'Position', index: 'Position', width: 100 },  
+            { name: 'Job.Name', index: 'Organization', width: 100}  
         ], 
         sortname: 'Surname',
         viewrecords: true, 
         sortorder: "desc", 
-        caption: "Контакты",
         multiselect: false,  
         rowNum: 20, 
         rownumbers: true, 
         loadonce: false,  
         autowidth: true,  
-        shrinkToFit: true,  
-        height: '100%',  
+        shrinkToFit: false,  
+        height: '100%', 
+        width:"100%", 
         rowList: [10, 20, 30, 50, 100],  
         sortable: true, 
         onSelectRow: function(){ 
@@ -305,21 +322,31 @@ function MainPageActions(){
     }).navGrid("#divPaging", { search: true, edit: false, add: false, del: false }, {}, {}, {}, { multipleSearch: false });
     }
 
-    this.OpenAddingBlock = function(){
-        dialog.open();
+    this.OpenAddBlock = function(){
+        dataLoader.ClearFields();
+       dataLoader.LoadOrganizationList();
+       document.getElementById("myModalLabel").innerHTML = "New contact";
+       document.getElementById('saveButton').onclick = function(){contactsActions.SentNewContact()};
+
     }
   
     this.OpenEditBlock = function(){
         if (window.SelectedRowID != undefined){
+            document.getElementById("myModalLabel").innerHTML = "Edit contact";
+            dataLoader.LoadOrganizationList();
+            dataLoader.LoadContactFields(window.SelectedRowID); 
+            $("#myModal").modal('show');
+            document.getElementById('saveButton').onclick = function(){contactsActions.UpdateContact()};
          }
          else{
             alert ("Строка не выбрана");
          }
     }
+   
     
      this.SearchContact =  function(){
         var str =  $("#SearchString").val();
-        if (str!=""){
+        if ((str.length>=3)&&(str.length<=30)){
            var dataUrl = 'ContactService.svc/GetContactsByParts';
            $.ajax({
               type: "POST",
@@ -338,9 +365,11 @@ function MainPageActions(){
                   alert(response.responseJSON.Message);
               }
             })
-              document.getElementById("showAllButton").classList.remove('btn-hidden');
+              document.getElementById("showAllButton").classList.remove('d-none');
         } 
+        else{
+            alert("Incorrect search string");
+        }
      }
-  }
+    }
 var PageActions = new MainPageActions();
-     
