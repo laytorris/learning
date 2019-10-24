@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.ServiceModel;
 using Homework1;
 
 namespace FinalService
@@ -15,10 +14,11 @@ namespace FinalService
             _ConnectionString = connectionString;
         }
 
-        public void InsertContact(Contact newcontact)
+        public int InsertContact(Contact newcontact)
         {
             string insertSQLExpression = "INSERT INTO dbo.Contact (Name, Surname, MiddleName, " +
-                "Gender, BirthDate, Phone, TaxNumber, Position, OrganizationID)" +
+                "Gender, BirthDate, Phone, TaxNumber, Position, OrganizationID) " +
+                "OUTPUT Inserted.ID" +
                 " VALUES (@name, @surname, @middlename, @gender, @birthdate," +
                 " @phone, @taxnumber, @position, @organizationid)";
 
@@ -26,7 +26,16 @@ namespace FinalService
             {
                 SqlCommand insertCommand = FillCommandParameters(insertSQLExpression, connection, newcontact);
                 OpenConnection(connection);
-                DoSQLCommand(insertCommand);
+                try
+                {
+                    int id = (int)insertCommand.ExecuteScalar();
+                    return id;
+                }
+                catch (SqlException ex)
+                {
+                    Logger.Log.Info($"SQLCommand failed, {ex.ToString()}");
+                    throw new SQLCommandException(ex);
+                }
                 Logger.Log.Info($"New contact inserted, {newcontact.ToString()}");
                 connection.Close();
             }
@@ -85,47 +94,14 @@ namespace FinalService
                 catch (SqlException ex)
                 {
                     connection.Close();
-                    Logger.Log.Info($"SQLCommand failed, {ex.Message}");
-                    throw new FaultException<string>(ex.Message, "Ошибка в процессе выполнения запроса к БД");
+                    Logger.Log.Info($"SQLCommand failed, {ex.ToString()}");
+                    throw new SQLCommandException(ex);
                 }
             }
 
         }
 
-   
-
-        internal Organization GetOrganizationByID(int id)
-        {
-
-            string searchExpression = "SELECT * from dbo.Organization WHERE ID = @id";
-            using (SqlConnection connection = new SqlConnection(_ConnectionString))
-            {
-                SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
-                searchCommand.Parameters.Add(new SqlParameter("@id", id));
-                connection.Open();
-                using (SqlDataReader reader = searchCommand.ExecuteReader())
-                {
-                    if (reader.HasRows)
-                    {
-                        ContactsDataConverter converter = new ContactsDataConverter();
-                        Organization organization = new Organization();
-                        while (reader.Read())
-                        {
-                            organization = (converter.OrganizationFromDataReader(reader));
-                        }
-                        connection.Close();
-                        return organization;
-                    }
-                    else
-                    {
-                        connection.Close();
-                        return null;
-                    }
-                };
-            }
-
-        }
-
+  
         internal List<Contact> GetByNameParts(string [] parameters, bool allowPartialMatch)
         {
             string searchExpression = (allowPartialMatch) ?
@@ -155,25 +131,34 @@ namespace FinalService
                 SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
                 searchCommand.Parameters.Add(new SqlParameter("@id", id));
                 connection.Open();
-                using (SqlDataReader reader = searchCommand.ExecuteReader())
+                try
                 {
-                    if (reader.HasRows)
+                    using (SqlDataReader reader = searchCommand.ExecuteReader())
                     {
-                        ContactsDataConverter converter = new ContactsDataConverter();
-                        Contact contact = new Contact();
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            contact = (converter.ContactFromDataReader(reader));
+                            ContactsDataConverter converter = new ContactsDataConverter();
+                            Contact contact = new Contact();
+                            while (reader.Read())
+                            {
+                                contact = (converter.ContactFromDataReader(reader));
+                            }
+                            connection.Close();
+                            return contact;
                         }
-                        connection.Close();
-                        return contact;
-                    }
-                    else
-                    {
-                        connection.Close();
-                        return null;
-                    }
-                };
+                        else
+                        {
+                            connection.Close();
+                            return null;
+                        }
+                    };
+                }
+                catch (SqlException ex)
+                {
+                    Logger.Log.Info($"SQLCommand failed, {ex.ToString()}");
+                    throw new SQLCommandException(ex);
+                }
+               
             }
             
         }
@@ -184,28 +169,37 @@ namespace FinalService
             {
                 command.Connection = connection;
                 connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+                try
                 {
-                    if (reader.HasRows)
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        ContactsDataConverter converter = new ContactsDataConverter();
-                        List<Contact> result = new List<Contact>();
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            Contact contact = (converter.ContactFromDataReader(reader));
-                            result.Add(contact);
-                            Logger.Log.Info($" New result row added, {contact.ToString()}");
+                            ContactsDataConverter converter = new ContactsDataConverter();
+                            List<Contact> result = new List<Contact>();
+                            while (reader.Read())
+                            {
+                                Contact contact = (converter.ContactFromDataReader(reader));
+                                result.Add(contact);
+                                Logger.Log.Info($" New result row added, {contact.ToString()}");
+                            }
+                            connection.Close();
+                            return result;
                         }
-                        connection.Close();
-                        return result;
-                    }
-                    else
-                    {
-                        Logger.Log.Info($" No results");
-                        connection.Close();
-                        return null;
-                    }
-                };
+                        else
+                        {
+                            Logger.Log.Info($" No results");
+                            connection.Close();
+                            return null;
+                        }
+                    };
+                }
+                catch(SqlException ex)
+                {
+                    Logger.Log.Info($"SQLCommand failed, {ex.ToString()}");
+                    throw new SQLCommandException(ex);
+                }
+                
 
 
             }
@@ -215,38 +209,6 @@ namespace FinalService
             string searchExpression = "SELECT * from dbo.Contact";
             SqlCommand command = new SqlCommand(searchExpression);
             return GetList(command);
-        }
-
-        internal List<Organization> GetOrgList()
-        {
-            string searchExpression = "SELECT * from dbo.Organization";
-            using (SqlConnection connection = new SqlConnection(_ConnectionString))
-            {
-                SqlCommand searchCommand = new SqlCommand(searchExpression, connection);
-                
-                OpenConnection(connection); 
-                
-                using (SqlDataReader reader = searchCommand.ExecuteReader())
-                {
-                    if (reader.HasRows)
-                    {
-                        ContactsDataConverter converter = new ContactsDataConverter();
-                        List<Organization> result = new List<Organization>();
-                        while (reader.Read())
-                        {
-                            result.Add(converter.OrganizationFromDataReader(reader));
-                        }
-                        connection.Close();
-                        return result;
-                    }
-                    else
-                    {
-                        connection.Close();
-                        return null;
-                    }
-                };
-
-            }
         }
 
         private SqlCommand FillCommandParameters(string SQLExpression, SqlConnection connection, Contact newcontact)
@@ -295,8 +257,8 @@ namespace FinalService
             }
             catch (SqlException ex)
             {
-                Logger.Log.Info($"SQLCommand failed, {ex.Message}");
-                throw new FaultException<string>(ex.Message, "Ошибка в процессе выполнения запроса к БД");
+                Logger.Log.Info($"SQLCommand failed, {ex.ToString()}");
+                throw new SQLCommandException(ex);
             }
         }
 
@@ -309,8 +271,8 @@ namespace FinalService
             }
             catch (SqlException ex)
             {
-                Logger.Log.Info($"Connection to db {connection.ConnectionString} failed, {ex.Message}");
-                throw new FaultException<string>(ex.Message, "Ошибка подключения к базе данных");
+                Logger.Log.Info($"Connection to db {connection.ConnectionString} failed, {ex.ToString()}");
+                throw new DBConnectionException(ex);
             }
             
         }

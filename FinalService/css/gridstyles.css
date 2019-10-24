@@ -32,7 +32,7 @@
 	left: 0;
 	top: 0;
 	padding: 0;
-	font-size: 15px;
+	font-size: 11px;
 }
 .ui-jqgrid > .ui-jqgrid-view *,
 .ui-jqgrid > .ui-jqgrid-view *:before,
@@ -1617,3 +1617,4 @@ a.clearsearchclass {
 .subgrid-data .ui-jqgrid-legacy-subgrid  {
 	margin: 0;
 }
+© 2019 GitHub, Inc.

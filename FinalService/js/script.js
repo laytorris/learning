@@ -3,7 +3,8 @@ $(document).ready(function () {
     document.getElementById("showAllButton").classList.add("d-none");
     document.getElementById("ContactID").classList.add("d-none");
     var dataUrl = 'ContactService.svc/GetAllContacts';
-    PageActions.FillGrid(dataUrl); 
+    PageActions.FillGrid(dataUrl);
+     
     PageActions.SetListeners();
   });   
 
@@ -173,8 +174,9 @@ function ContactsActions(){
             processData: false,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            success : function() {
+            success : function(response) {
                 alert('Contact added');
+                PageActions.ChangeFormToEdit(response.d);
             },
             error: function(response) {
                 alert(response.responseJSON.Message);
@@ -307,10 +309,10 @@ function MainPageActions(){
         rowNum: 20, 
         rownumbers: true, 
         loadonce: false,  
-        autowidth: true,  
+        autowidth: false,  
         shrinkToFit: false,  
         height: '100%', 
-        width:"100%", 
+        width:'100%', 
         rowList: [10, 20, 30, 50, 100],  
         sortable: true, 
         onSelectRow: function(){ 
@@ -342,7 +344,12 @@ function MainPageActions(){
             alert ("Строка не выбрана");
          }
     }
-   
+    this.ChangeFormToEdit = function(id){
+        document.getElementById("myModalLabel").innerHTML = "Edit contact";
+        document.getElementById("ContactID").value = id;
+        document.getElementById('saveButton').onclick = function(){contactsActions.UpdateContact()};
+
+     }
     
      this.SearchContact =  function(){
         var str =  $("#SearchString").val();

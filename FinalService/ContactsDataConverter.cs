@@ -75,8 +75,9 @@ namespace FinalService
             
             if ((JobID!= null)&&(JobID != DBNull.Value)){
 
-                ContactsDBOperator dbOperator = new ContactsDBOperator(ConfigurationManager.AppSettings["DBConnectionString"]);
-                Organization job = dbOperator.GetOrganizationByID((int)JobID);
+                string connectionString = ConfigurationManager.AppSettings["DBConnectionString"];
+                OrganizationDBOperator orgOperator = new OrganizationDBOperator(connectionString);
+                Organization job = orgOperator.GetOrganizationByID((int)JobID);
                 result.Job = job;
             }
             return result;

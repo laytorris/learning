@@ -78,6 +78,9 @@
     <Compile Include="Attributes\PhoneRegularExpression.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactsDataConverter.cs" />
+    <Compile Include="SQLCommandException.cs" />
+    <Compile Include="DBConnectionException.cs" />
+    <Compile Include="OrganizationDBOperator.cs" />
     <Compile Include="ContactsDBOperator.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Logger.cs" />

@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
-using System.Web.Script.Serialization;
 
 namespace FinalService
 {
@@ -17,21 +16,38 @@ namespace FinalService
         {
             Logger.InitLogger();
         }
+
         [OperationContract]
-        public void InsertContact(string Name, string Surname, string MiddleName,
+        public string InsertContact(string Name, string Surname, string MiddleName,
                 string Gender, string BirthDate, string Phone, string TaxNumber,
                 string Position, string JobID)
         {
             Logger.Log.Info($"InsertContact got params: name = {Name}, surname = {Surname}, " +
                 $"middlename = {MiddleName},gender = { Gender}, birthday = {BirthDate}, phone = {Phone}," +
                 $" taxnumber = {TaxNumber}, position = {Position}, jobid = {JobID}");
-            ContactsDataConverter preparer = new ContactsDataConverter();
-            Contact newContact = preparer.CreateInstance(Name, Surname, MiddleName,
+            ContactsDataConverter converter = new ContactsDataConverter();
+            Contact newContact = converter.CreateInstance(Name, Surname, MiddleName,
                 Gender, BirthDate, Phone, TaxNumber, Position, JobID);
 
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
-            dBOperator.InsertContact(newContact);
+
+            try 
+            {
+                
+                int id = dBOperator.InsertContact(newContact);
+                string result = JsonConvert.SerializeObject(id);
+                return result;
+            }
+            catch (DBConnectionException)
+            {
+                throw new FaultException("Ошибка подключения к базе данных");
+            }
+            catch(SQLCommandException)
+            {
+                throw new FaultException("Ошибка выполнения запроса к базе данных");
+            }
+
         }
 
         [OperationContract]
@@ -48,10 +64,22 @@ namespace FinalService
 
             if (dBOperator.RowExists(ID))
             {
-                ContactsDataConverter preparer = new ContactsDataConverter();
-                Contact newContact = preparer.CreateInstance(Name, Surname, MiddleName,
+                ContactsDataConverter converter = new ContactsDataConverter();
+                Contact newContact = converter.CreateInstance(Name, Surname, MiddleName,
                     Gender, BirthDate, Phone, TaxNumber, Position, JobID, ID);
-                dBOperator.UpdateContact(newContact);
+                try
+                {
+                    dBOperator.UpdateContact(newContact);
+                }
+                catch (DBConnectionException)
+                {
+                    throw new FaultException("Ошибка подключения к базе данных");
+                }
+                catch (SQLCommandException)
+                {
+                    throw new FaultException("Ошибка выполнения запроса к базе данных");
+                }
+            
             }
             else
             {
@@ -70,7 +98,19 @@ namespace FinalService
 
             if (dBOperator.RowExists(id))
             {
-                dBOperator.DeleteContact(id);
+                try 
+                { 
+                    dBOperator.DeleteContact(id); 
+                }
+                catch (DBConnectionException)
+                {
+                    throw new FaultException("Ошибка подключения к базе данных");
+                }
+                catch (SQLCommandException)
+                {
+                    throw new FaultException("Ошибка выполнения запроса к базе данных");
+                }
+                
             }
             else
             {
@@ -85,21 +125,32 @@ namespace FinalService
             Logger.Log.Info($"GetContact got params: id = {id}");
             string db = ConfigurationManager.AppSettings["DBConnectionString"];
             ContactsDBOperator dBOperator = new ContactsDBOperator(db);
-
-            if (dBOperator.RowExists(id))
+            try
             {
-                Contact contact = dBOperator.GetById(id);
+                if (dBOperator.RowExists(id))
+                {
+                    Contact contact = dBOperator.GetById(id);
 
-                JsonSerializerSettings settings = new JsonSerializerSettings();
-                settings.DateFormatString = "yyyy-MM-dd";
-                string responce = JsonConvert.SerializeObject(contact, settings);
-                return responce;
+                    JsonSerializerSettings settings = new JsonSerializerSettings();
+                    settings.DateFormatString = "yyyy-MM-dd";
+                    string responce = JsonConvert.SerializeObject(contact, settings);
+                    return responce;
+                }
+                else
+                {
+                    Logger.Log.Info($"Contact doesn't exist: id = {id}");
+                    throw new FaultException<string>(id, "Контакт не существует");
+                }
             }
-            else
+            catch(DBConnectionException)
             {
-                Logger.Log.Info($"Contact doesn't exist: id = {id}");
-                throw new FaultException<string>(id, "Контакт не существует");
+                throw new FaultException("Ошибка подключения к базе данных");
             }
+            catch (SQLCommandException)
+            {
+                throw new FaultException("Ошибка выполнения запроса к базе данных");
+            }
+           
         }
 
         [OperationContract]
@@ -178,9 +229,10 @@ namespace FinalService
         public string GetOrganizationList()
         {
             Logger.Log.Info($"GetOrganizationList got request");
-            string db = ConfigurationManager.AppSettings["DBConnectionString"];
-            ContactsDBOperator dBOperator = new ContactsDBOperator(db);
-            List<Organization> organizations = dBOperator.GetOrgList();
+            string connectionString = ConfigurationManager.AppSettings["DBConnectionString"];
+            OrganizationDBOperator organizationDBOperator = new OrganizationDBOperator(connectionString);
+
+            List<Organization> organizations = organizationDBOperator.GetOrgList();
 
             JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.DateFormatString = "d MMMM, yyyy";
