@@ -1,8 +1,10 @@
 ﻿using Homework1;
 using Newtonsoft.Json;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
 
@@ -179,34 +181,9 @@ namespace FinalService
         public string GetContactsByParts(string searchString)
         {
             Logger.Log.Info($"GetContactsByParts got searching params: id = {searchString}");
-            searchString.Trim(',', ' ');
 
-            string db = ConfigurationManager.AppSettings["DBConnectionString"];
-            ContactsDBOperator dBOperator = new ContactsDBOperator(db);
+            List<Contact> contacts = ContactsSearch(searchString);
 
-            List<Contact> contacts;
-
-            string[] parameters;
-            if (searchString.Contains(" "))
-            {
-                //имя и фамилия должны частично соответствовать поиску
-                Logger.Log.Info($"Search by two params, search condition AND");
-                parameters = searchString.Split(' ');
-               contacts = dBOperator.GetByNameParts(parameters, false);
-            }
-            else if (searchString.Contains(","))
-            {
-                //имя ИЛИ фамилия должны частично соответствовать поиску
-                Logger.Log.Info($"Search by two params, search condition OR");
-                parameters = searchString.Split(',');
-                contacts = dBOperator.GetByNameParts(parameters, true);
-            }
-            else
-            {
-                //поиск по одной строке
-                Logger.Log.Info($"Search by one param");
-                contacts = dBOperator.GetByNameParts(searchString);
-             }
             if (contacts == null)
             {
                 Logger.Log.Info($"No search results. Return exception");
@@ -239,6 +216,66 @@ namespace FinalService
             string responce = JsonConvert.SerializeObject(organizations, settings);
             Logger.Log.Info($"GetOrganizationList return {organizations?.Count} organizations");
             return responce;
+        }
+        [OperationContract]
+        public MemoryStream SaveToXML(string filter)
+        {
+            string db = ConfigurationManager.AppSettings["DBConnectionString"];
+            ContactsDBOperator dBOperator = new ContactsDBOperator(db);
+            List<Contact> contacts = (filter == "")?dBOperator.GetAll():ContactsSearch(filter);
+
+            //string file = ConfigurationManager.AppSettings["tempfilePath"];
+
+            //string filepath = AppDomain.CurrentDomain.BaseDirectory + file;
+
+            using (ExcelPackage package = new ExcelPackage())
+            {
+                var newworksheet = package.Workbook.Worksheets.Add("test");
+                newworksheet.Cells["A1"].LoadFromCollection(contacts,true);
+
+                var stream = new MemoryStream(package.GetAsByteArray());
+                return stream;
+
+                //string filepath = "C:\\Users\\anotfullina\\Documents\\GitHub\\learning\\FinalService\\temp\\contacts1.xlsx";
+                //FileInfo fi = new FileInfo(filepath);
+                //package.SaveAs(fi);
+            }
+
+
+
+
+            //return "temp\\contacts.xls";
+        }
+
+        private List<Contact> ContactsSearch(string filter)
+        {
+            filter.Trim(',', ' ');
+
+            string db = ConfigurationManager.AppSettings["DBConnectionString"];
+            ContactsDBOperator dBOperator = new ContactsDBOperator(db);
+
+            string[] parameters;
+            if (filter.Contains(" "))
+            {
+                //имя и фамилия должны частично соответствовать поиску
+                Logger.Log.Info($"Search by two params, search condition AND");
+                parameters = filter.Split(' ');
+                return dBOperator.GetByNameParts(parameters, false);
+            }
+            else if (filter.Contains(","))
+            {
+                //имя ИЛИ фамилия должны частично соответствовать поиску
+                Logger.Log.Info($"Search by two params, search condition OR");
+                parameters = filter.Split(',');
+                return dBOperator.GetByNameParts(parameters, true);
+            }
+            else
+            {
+                //поиск по одной строке
+                Logger.Log.Info($"Search by one param");
+                return dBOperator.GetByNameParts(filter);
+            }
+          
         }
     }
 }

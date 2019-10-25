@@ -1,0 +1,1030 @@
+2019-10-24 11:33:54,064  INFO  GetAllContacts called
+2019-10-24 11:33:54,211  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 11:33:54,216  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 11:33:54,221  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 11:33:54,226  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 11:33:54,232  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 11:33:54,236  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 11:33:54,241  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 11:33:54,245  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:33:54,250  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:33:54,426  INFO  GetAllContacts return 9 contacts
+2019-10-24 11:34:15,294  INFO  GetAllContacts called
+2019-10-24 11:34:15,307  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 11:34:15,315  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 11:34:15,321  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 11:34:15,345  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 11:34:15,354  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 11:34:15,363  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 11:34:15,370  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 11:34:15,380  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:34:15,388  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:34:15,391  INFO  GetAllContacts return 9 contacts
+2019-10-24 11:34:21,010  INFO  GetOrganizationList got request
+2019-10-24 11:34:21,018  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 11:34:21,025  INFO  GetOrganizationList return 2 organizations
+2019-10-24 11:35:11,861  INFO  GetOrganizationList got request
+2019-10-24 11:35:11,878  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 11:35:11,882  INFO  GetContact got params: id = 
+2019-10-24 11:35:11,895  INFO  GetOrganizationList return 2 organizations
+2019-10-24 11:35:11,906  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 11:35:11,922  INFO  SQLCommand failed, Параметризированный запрос "(@id nvarchar(4000))SELECT ID FROM dbo.Contact WHERE ID = @id" ожидает параметр "@id", который не был указан.
+2019-10-24 11:36:19,521  INFO  GetOrganizationList got request
+2019-10-24 11:36:19,527  INFO  GetContact got params: id = 
+2019-10-24 11:36:19,553  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 11:36:19,567  INFO  GetOrganizationList return 2 organizations
+2019-10-24 11:36:19,570  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 11:36:19,584  INFO  SQLCommand failed, Параметризированный запрос "(@id nvarchar(4000))SELECT ID FROM dbo.Contact WHERE ID = @id" ожидает параметр "@id", который не был указан.
+2019-10-24 11:36:19,789  INFO  GetAllContacts called
+2019-10-24 11:36:19,802  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 11:36:19,811  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 11:36:19,817  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 11:36:19,832  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 11:36:19,840  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 11:36:19,850  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 11:36:19,855  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 11:36:19,863  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:36:19,870  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:36:19,871  INFO  GetAllContacts return 9 contacts
+2019-10-24 11:36:37,016  INFO  GetAllContacts called
+2019-10-24 11:36:37,045  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 11:36:37,060  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 11:36:37,067  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 11:36:37,080  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 11:36:37,090  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 11:36:37,101  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 11:36:37,109  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 11:36:37,118  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:36:37,127  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:36:37,128  INFO  GetAllContacts return 9 contacts
+2019-10-24 11:36:45,859  INFO  GetOrganizationList got request
+2019-10-24 11:36:45,869  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 11:36:45,874  INFO  GetOrganizationList return 2 organizations
+2019-10-24 11:37:34,170  INFO  GetAllContacts called
+2019-10-24 11:37:34,189  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 11:37:34,199  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 11:37:34,212  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 11:37:34,220  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 11:37:34,228  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 11:37:34,235  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 11:37:34,246  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 11:37:34,256  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:37:34,266  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:37:34,268  INFO  GetAllContacts return 9 contacts
+2019-10-24 11:40:12,068  INFO  GetAllContacts called
+2019-10-24 11:40:12,096  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 11:40:12,104  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 11:40:12,117  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 11:40:12,132  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 11:40:12,141  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 11:40:12,149  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 11:40:12,154  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 11:40:12,154  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:40:12,171  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:40:12,172  INFO  GetAllContacts return 9 contacts
+2019-10-24 11:56:06,483  INFO  GetAllContacts called
+2019-10-24 11:56:06,506  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 11:56:06,521  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 11:56:06,531  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 11:56:06,539  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 11:56:06,552  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 11:56:06,566  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 11:56:06,573  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 11:56:06,584  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:56:06,591  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 11:56:06,594  INFO  GetAllContacts return 9 contacts
+2019-10-24 12:12:23,146  INFO  GetAllContacts called
+2019-10-24 12:12:23,165  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 12:12:23,172  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:12:23,178  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:12:23,182  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:12:23,188  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:12:23,193  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:12:23,198  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:12:23,204  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:12:23,209  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:12:23,210  INFO  GetAllContacts return 9 contacts
+2019-10-24 12:12:26,880  INFO  GetOrganizationList got request
+2019-10-24 12:12:26,884  INFO  GetContact got params: id = 28
+2019-10-24 12:12:26,886  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:12:26,890  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:12:26,892  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:12:33,670  INFO  GetOrganizationList got request
+2019-10-24 12:12:33,674  INFO  GetContact got params: id = 30
+2019-10-24 12:12:33,677  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:12:33,680  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:12:33,685  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:12:39,124  INFO  GetOrganizationList got request
+2019-10-24 12:12:39,134  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:12:39,137  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:30:17,455  INFO  GetAllContacts called
+2019-10-24 12:30:17,500  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 12:30:17,505  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:30:17,510  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:30:17,516  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:30:17,521  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:30:17,526  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:30:17,532  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:30:17,538  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:30:17,543  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:30:17,748  INFO  GetAllContacts return 9 contacts
+2019-10-24 12:30:57,648  INFO  GetOrganizationList got request
+2019-10-24 12:30:57,654  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:30:57,659  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:31:14,552  INFO  InsertContact got params: name = Dhgfd, surname = Hbgvfcd, middlename = ,gender = m, birthday = , phone = , taxnumber = , position = ghbjnkm, jobid = 1
+2019-10-24 12:31:14,560  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:31:14,590  INFO  New contact inserted, 0 Hbgvfcd Dhgfd  m    random ghbjnkm
+2019-10-24 12:34:44,115  INFO  GetOrganizationList got request
+2019-10-24 12:34:44,147  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:34:44,282  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:35:13,114  INFO  InsertContact got params: name = Dhgfd, surname = Hbgvfcd, middlename = ,gender = m, birthday = , phone = , taxnumber = , position = аналитик, jobid = 2
+2019-10-24 12:35:13,182  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:35:45,596  INFO  New contact inserted, 0 Hbgvfcd Dhgfd  m    random аналитик
+2019-10-24 12:38:54,142  INFO  GetAllContacts called
+2019-10-24 12:38:54,177  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 12:38:54,181  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:38:54,187  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:38:54,192  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:38:54,197  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:38:54,201  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:38:54,207  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:38:54,211  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:38:54,216  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:38:54,223  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:38:54,228  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:38:54,409  INFO  GetAllContacts return 11 contacts
+2019-10-24 12:39:04,331  INFO  GetOrganizationList got request
+2019-10-24 12:39:04,337  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:39:04,342  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:39:22,385  INFO  InsertContact got params: name = Test, surname = Ynhbgfd, middlename = ,gender = f, birthday = 2019-10-03, phone = , taxnumber = , position = , jobid = 1
+2019-10-24 12:39:22,396  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:40:19,777  INFO  GetOrganizationList got request
+2019-10-24 12:40:19,783  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:40:19,788  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:41:44,240  INFO  InsertContact got params: name = Hahaa, surname = Umyjhntbgrfvdcs, middlename = ,gender = f, birthday = 2019-10-04, phone = , taxnumber = 299876, position = , jobid = 1
+2019-10-24 12:41:44,245  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:42:05,974  INFO  UpdateContact got params: id = , name = Poinner, surname = Umyjhntbgrfvdcs, middlename = ,gender = f, birthday = 2019-10-04, phone = , taxnumber = 299876, position = , jobid = 1
+2019-10-24 12:42:05,983  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:42:05,986  INFO  Contact doesn't exist: id = 
+2019-10-24 12:42:31,340  INFO  UpdateContact got params: id = , name = Poinner, surname = Umyjhntbgrfvdcs, middlename = ,gender = f, birthday = 2019-10-04, phone = , taxnumber = 299876, position = , jobid = 1
+2019-10-24 12:42:31,350  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:42:31,354  INFO  Contact doesn't exist: id = 
+2019-10-24 12:44:59,446  INFO  UpdateContact got params: id = , name = Poinner, surname = Umyjhntbgrfvdcs, middlename = ,gender = f, birthday = 2019-10-04, phone = , taxnumber = 299876, position = , jobid = 1
+2019-10-24 12:44:59,680  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:44:59,731  INFO  Contact doesn't exist: id = 
+2019-10-24 12:45:14,367  INFO  GetAllContacts called
+2019-10-24 12:45:14,381  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 12:45:14,388  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:45:14,393  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:45:14,399  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:45:14,405  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:45:14,410  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:45:14,415  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:45:14,421  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:45:14,426  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:45:14,431  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:45:14,437  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:45:14,445  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 12:45:14,450  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 12:45:14,451  INFO  GetAllContacts return 13 contacts
+2019-10-24 12:45:27,463  INFO  GetAllContacts called
+2019-10-24 12:45:27,477  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 12:45:27,492  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:45:27,505  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:45:27,517  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:45:27,527  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:45:27,540  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:45:27,548  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:45:27,561  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:45:27,568  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:45:27,574  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:45:27,579  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:45:27,585  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 12:45:27,591  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 12:45:27,593  INFO  GetAllContacts return 13 contacts
+2019-10-24 12:45:30,833  INFO  GetAllContacts called
+2019-10-24 12:45:30,846  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 12:45:30,854  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:45:30,865  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:45:30,877  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:45:30,886  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:45:30,895  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:45:30,908  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:45:30,917  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:45:30,924  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:45:30,930  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:45:30,938  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:45:30,944  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 12:45:30,954  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 12:45:30,956  INFO  GetAllContacts return 13 contacts
+2019-10-24 12:45:31,935  INFO  GetOrganizationList got request
+2019-10-24 12:45:31,940  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:45:31,944  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:45:44,514  INFO  InsertContact got params: name = Test, surname = Test, middlename = ,gender = f, birthday = , phone = , taxnumber = 299876, position = , jobid = 2
+2019-10-24 12:45:44,519  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:46:10,883  INFO  UpdateContact got params: id = 48, name = Test2, surname = Test, middlename = ,gender = f, birthday = , phone = , taxnumber = 299876, position = , jobid = 2
+2019-10-24 12:46:10,892  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:46:10,902  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:46:10,910  INFO  Contact updated, 48 Test Test2  f   299876 random 
+2019-10-24 12:50:26,947  INFO  GetAllContacts called
+2019-10-24 12:50:26,964  INFO   New result row added, 28 Artyu Xtryuio  f 234567890 23.10.1987 0:00:00 299876 Navicon редактор
+2019-10-24 12:50:26,970  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:50:26,978  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:50:26,986  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:50:26,994  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:50:26,999  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:50:27,011  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:50:27,023  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:50:27,032  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:50:27,037  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:50:27,042  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:50:27,048  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 12:50:27,053  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 12:50:27,058  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 12:50:27,060  INFO  GetAllContacts return 14 contacts
+2019-10-24 12:51:02,366  INFO  GetOrganizationList got request
+2019-10-24 12:51:02,372  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:51:02,377  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:51:06,725  INFO  GetOrganizationList got request
+2019-10-24 12:51:06,732  INFO  GetContact got params: id = 28
+2019-10-24 12:51:06,733  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:51:06,739  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:51:06,741  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:51:10,240  INFO  DeleteContact got params: id = 28
+2019-10-24 12:51:10,249  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:51:10,259  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:51:10,266  INFO  Contact deleted, ID = 28
+2019-10-24 12:51:12,078  INFO  GetAllContacts called
+2019-10-24 12:51:12,092  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:51:12,098  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:51:12,104  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:51:12,108  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:51:12,113  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:51:12,118  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:51:12,123  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:51:12,128  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:51:12,132  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:51:12,137  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:51:12,141  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 12:51:12,146  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 12:51:12,150  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 12:51:12,152  INFO  GetAllContacts return 13 contacts
+2019-10-24 12:51:20,746  INFO  GetContactsByParts got searching params: id = Bnklpo
+2019-10-24 12:51:20,747  INFO  Search by one param
+2019-10-24 12:51:20,759  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:51:20,760  INFO  GetContactsByParts return 1 contacts
+2019-10-24 12:51:25,008  INFO  GetAllContacts called
+2019-10-24 12:51:25,018  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:51:25,023  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:51:25,028  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:51:25,033  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:51:25,039  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:51:25,044  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:51:25,049  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:51:25,054  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:51:25,059  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:51:25,060  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:51:25,060  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 12:51:25,060  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 12:51:25,077  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 12:51:25,077  INFO  GetAllContacts return 13 contacts
+2019-10-24 12:53:27,734  INFO  GetContact got params: id = 30
+2019-10-24 12:53:27,738  INFO  GetOrganizationList got request
+2019-10-24 12:53:27,743  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:53:27,752  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 12:53:27,756  INFO  GetOrganizationList return 2 organizations
+2019-10-24 12:58:57,207  INFO  GetAllContacts called
+2019-10-24 12:58:57,224  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 12:58:57,233  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 12:58:57,245  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 12:58:57,256  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 12:58:57,265  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 12:58:57,276  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 12:58:57,288  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:58:57,294  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 12:58:57,300  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 12:58:57,307  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 12:58:57,313  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 12:58:57,321  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 12:58:57,327  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 12:58:57,328  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:00:43,364  INFO  GetAllContacts called
+2019-10-24 13:00:43,380  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:00:43,388  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:00:43,397  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:00:43,406  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:00:43,420  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:00:43,431  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:00:43,437  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:00:43,445  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:00:43,451  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:00:43,457  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:00:43,463  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:00:43,469  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:00:43,475  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:00:43,476  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:01:28,905  INFO  GetAllContacts called
+2019-10-24 13:01:28,924  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:01:28,940  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:01:28,950  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:01:28,960  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:01:28,973  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:01:28,987  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:01:28,994  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:01:29,006  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:01:29,013  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:01:29,021  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:01:29,027  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:01:29,034  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:01:29,042  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:01:29,043  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:01:37,436  INFO  GetAllContacts called
+2019-10-24 13:01:37,450  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:01:37,462  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:01:37,472  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:01:37,482  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:01:37,492  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:01:37,502  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:01:37,509  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:01:37,517  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:01:37,523  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:01:37,529  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:01:37,535  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:01:37,539  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:01:37,545  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:01:37,546  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:02:16,998  INFO  GetAllContacts called
+2019-10-24 13:02:17,023  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:02:17,030  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:02:17,041  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:02:17,051  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:02:17,060  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:02:17,066  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:02:17,075  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:02:17,080  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:02:17,085  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:02:17,091  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:02:17,096  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:02:17,100  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:02:17,105  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:02:17,107  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:04:44,687  INFO  GetAllContacts called
+2019-10-24 13:04:44,710  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:04:44,716  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:04:44,728  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:04:44,739  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:04:44,746  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:04:44,752  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:04:44,757  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:04:44,766  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:04:44,773  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:04:44,777  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:04:44,782  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:04:44,788  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:04:44,793  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:04:44,794  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:05:07,334  INFO  GetAllContacts called
+2019-10-24 13:05:07,344  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:05:07,352  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:05:07,361  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:05:07,369  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:05:07,377  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:05:07,392  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:05:07,403  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:05:07,409  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:05:07,416  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:05:07,424  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:05:07,430  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:05:07,436  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:05:07,442  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:05:07,445  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:06:36,299  INFO  GetAllContacts called
+2019-10-24 13:06:36,318  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:06:36,332  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:06:36,339  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:06:36,353  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:06:36,369  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:06:36,381  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:06:36,388  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:06:36,398  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:06:36,408  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:06:36,414  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:06:36,420  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:06:36,427  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:06:36,433  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:06:36,435  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:07:15,649  INFO  GetAllContacts called
+2019-10-24 13:07:15,661  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:07:15,673  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:07:15,683  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:07:15,692  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:07:15,705  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:07:15,718  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:07:15,727  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:07:15,736  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:07:15,742  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:07:15,748  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:07:15,756  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:07:15,763  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:07:15,768  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:07:15,770  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:08:40,720  INFO  GetAllContacts called
+2019-10-24 13:08:40,735  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:08:40,745  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:08:40,752  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:08:40,765  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:08:40,781  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:08:40,788  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:08:40,795  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:08:40,801  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:08:40,807  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:08:40,813  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:08:40,818  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:08:40,824  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:08:40,830  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:08:40,830  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:10:25,862  INFO  GetAllContacts called
+2019-10-24 13:10:25,880  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:10:25,893  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:10:25,909  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:10:25,917  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:10:25,927  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:10:25,943  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:10:25,952  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:10:25,961  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:10:25,968  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:10:25,977  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:10:25,984  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:10:25,992  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:10:25,999  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:10:26,003  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:10:56,339  INFO  GetAllContacts called
+2019-10-24 13:10:56,354  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:10:56,359  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:10:56,365  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:10:56,371  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:10:56,378  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:10:56,385  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:10:56,391  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:10:56,396  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:10:56,403  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:10:56,409  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:10:56,415  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:10:56,421  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:10:56,427  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:10:56,428  INFO  GetAllContacts return 13 contacts
+2019-10-24 13:11:12,317  INFO  GetAllContacts called
+2019-10-24 13:11:12,332  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 13:11:12,341  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 13:11:12,350  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 13:11:12,361  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 13:11:12,369  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 13:11:12,377  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 13:11:12,388  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:11:12,398  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 13:11:12,405  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 13:11:12,415  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 13:11:12,423  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 13:11:12,430  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 13:11:12,437  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 13:11:12,439  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:05:09,298  INFO  GetAllContacts called
+2019-10-24 15:05:09,374  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:05:09,379  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:05:09,384  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:05:09,389  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:05:09,393  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:05:09,397  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:05:09,401  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:05:09,405  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:05:09,409  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:05:09,413  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:05:09,417  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:05:09,423  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:05:09,429  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:05:09,586  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:05:32,915  INFO  GetOrganizationList got request
+2019-10-24 15:05:32,923  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:05:32,927  INFO  GetContact got params: id = 37
+2019-10-24 15:05:32,929  INFO  GetOrganizationList return 2 organizations
+2019-10-24 15:05:32,935  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:05:37,581  INFO  GetOrganizationList got request
+2019-10-24 15:05:37,585  INFO  GetContact got params: id = 39
+2019-10-24 15:05:37,586  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:05:37,588  INFO  GetOrganizationList return 2 organizations
+2019-10-24 15:05:37,593  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:06:28,314  INFO  GetAllContacts called
+2019-10-24 15:06:28,328  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:06:28,332  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:06:28,339  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:06:28,343  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:06:28,348  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:06:28,352  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:06:28,357  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:06:28,361  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:06:28,365  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:06:28,367  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:06:28,367  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:06:28,367  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:06:28,367  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:06:28,367  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:06:29,823  INFO  GetAllContacts called
+2019-10-24 15:06:29,830  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:06:29,837  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:06:29,842  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:06:29,846  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:06:29,852  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:06:29,860  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:06:29,864  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:06:29,870  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:06:29,875  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:06:29,879  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:06:29,883  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:06:29,887  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:06:29,891  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:06:29,892  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:09:58,268  INFO  GetAllContacts called
+2019-10-24 15:09:58,281  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:09:58,286  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:09:58,290  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:09:58,296  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:09:58,301  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:09:58,305  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:09:58,309  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:09:58,313  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:09:58,318  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:09:58,321  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:09:58,325  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:09:58,327  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:09:58,327  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:09:58,327  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:10:03,789  INFO  GetAllContacts called
+2019-10-24 15:10:03,800  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:10:03,814  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:10:03,821  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:10:03,830  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:10:03,836  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:10:03,841  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:10:03,851  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:10:03,857  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:10:03,863  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:10:03,868  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:10:03,873  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:10:03,879  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:10:03,884  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:10:03,886  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:12:01,991  INFO  GetAllContacts called
+2019-10-24 15:12:02,005  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:12:02,012  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:12:02,018  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:12:02,024  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:12:02,030  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:12:02,035  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:12:02,040  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:02,045  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:02,049  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:12:02,053  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:12:02,057  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:12:02,062  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:12:02,066  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:12:02,067  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:12:13,501  INFO  GetAllContacts called
+2019-10-24 15:12:13,512  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:12:13,517  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:12:13,521  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:12:13,529  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:12:13,533  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:12:13,538  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:12:13,544  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:13,548  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:13,553  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:12:13,557  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:12:13,558  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:12:13,558  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:12:13,558  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:12:13,558  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:12:22,641  INFO  GetAllContacts called
+2019-10-24 15:12:22,655  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:12:22,663  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:12:22,671  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:12:22,682  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:12:22,689  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:12:22,697  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:12:22,703  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:22,708  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:22,714  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:12:22,719  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:12:22,724  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:12:22,729  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:12:22,734  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:12:22,735  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:12:28,825  INFO  GetAllContacts called
+2019-10-24 15:12:28,838  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:12:28,844  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:12:28,848  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:12:28,853  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:12:28,857  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:12:28,860  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:12:28,860  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:28,860  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:12:28,860  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:12:28,876  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:12:28,876  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:12:28,876  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:12:28,876  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:12:28,892  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:12:38,956  INFO  GetOrganizationList got request
+2019-10-24 15:12:38,959  INFO  GetContact got params: id = 40
+2019-10-24 15:12:38,961  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:12:38,964  INFO  GetOrganizationList return 2 organizations
+2019-10-24 15:12:38,965  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:14:18,240  INFO  GetAllContacts called
+2019-10-24 15:14:18,251  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:14:18,259  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:14:18,264  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:14:18,271  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:14:18,277  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:14:18,281  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:14:18,285  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:14:18,289  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:14:18,294  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:14:18,299  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:14:18,304  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:14:18,309  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:14:18,315  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:14:18,316  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:14:20,085  INFO  GetOrganizationList got request
+2019-10-24 15:14:20,088  INFO  GetContact got params: id = 41
+2019-10-24 15:14:20,090  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:14:20,093  INFO  GetOrganizationList return 2 organizations
+2019-10-24 15:14:20,094  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:14:32,182  INFO  GetAllContacts called
+2019-10-24 15:14:32,193  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:14:32,199  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:14:32,204  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:14:32,210  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:14:32,216  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:14:32,221  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:14:32,226  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:14:32,230  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:14:32,234  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:14:32,240  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:14:32,244  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:14:32,248  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:14:32,252  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:14:32,253  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:14:53,168  INFO  GetAllContacts called
+2019-10-24 15:14:53,179  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:14:53,186  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:14:53,192  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:14:53,202  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:14:53,209  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:14:53,213  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:14:53,220  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:14:53,225  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:14:53,229  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:14:53,234  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:14:53,238  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:14:53,242  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:14:53,246  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:14:53,248  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:22:11,562  INFO  GetAllContacts called
+2019-10-24 15:22:11,575  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:22:11,582  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:22:11,588  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:22:11,598  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:22:11,603  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:22:11,614  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:22:11,623  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:22:11,629  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:22:11,635  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:22:11,641  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:22:11,647  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:22:11,652  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:22:11,656  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:22:11,657  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:22:54,623  INFO  GetAllContacts called
+2019-10-24 15:22:54,638  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:22:54,643  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:22:54,653  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:22:54,661  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:22:54,667  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:22:54,673  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:22:54,677  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:22:54,682  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:22:54,689  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:22:54,702  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:22:54,713  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:22:54,721  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:22:54,726  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:22:54,728  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:23:07,244  INFO  GetAllContacts called
+2019-10-24 15:23:07,256  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:23:07,261  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:23:07,269  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:23:07,275  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:23:07,284  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:23:07,290  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:23:07,295  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:07,304  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:07,312  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:23:07,322  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:23:07,328  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:23:07,335  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:23:07,340  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:23:07,341  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:23:17,158  INFO  GetAllContacts called
+2019-10-24 15:23:17,169  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:23:17,175  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:23:17,182  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:23:17,188  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:23:17,195  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:23:17,202  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:23:17,207  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:17,216  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:17,226  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:23:17,233  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:23:17,239  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:23:17,244  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:23:17,249  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:23:17,251  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:23:33,455  INFO  GetAllContacts called
+2019-10-24 15:23:33,468  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:23:33,473  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:23:33,483  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:23:33,490  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:23:33,498  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:23:33,503  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:23:33,508  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:33,520  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:33,528  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:23:33,535  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:23:33,540  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:23:33,557  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:23:33,564  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:23:33,565  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:23:43,255  INFO  GetAllContacts called
+2019-10-24 15:23:43,266  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:23:43,271  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:23:43,278  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:23:43,285  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:23:43,293  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:23:43,299  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:23:43,310  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:43,316  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:23:43,323  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:23:43,331  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:23:43,338  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:23:43,346  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:23:43,356  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:23:43,360  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:28:04,857  INFO  GetAllContacts called
+2019-10-24 15:28:04,873  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:28:04,880  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:28:04,887  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:28:04,898  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:28:04,904  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:28:04,910  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:28:04,917  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:28:04,922  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:28:04,934  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:28:04,941  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:28:04,949  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:28:04,954  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:28:04,959  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:28:04,963  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:28:40,408  INFO  GetAllContacts called
+2019-10-24 15:28:40,416  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:28:40,423  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:28:40,429  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:28:40,433  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:28:40,439  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:28:40,443  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:28:40,448  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:28:40,455  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:28:40,460  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:28:40,466  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:28:40,475  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:28:40,482  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:28:40,490  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:28:40,491  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:28:44,542  INFO  GetAllContacts called
+2019-10-24 15:28:44,554  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:28:44,560  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:28:44,566  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:28:44,572  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:28:44,578  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:28:44,585  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:28:44,594  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:28:44,599  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:28:44,607  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:28:44,611  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:28:44,616  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:28:44,623  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:28:44,627  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:28:44,629  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:28:46,008  INFO  GetOrganizationList got request
+2019-10-24 15:28:46,011  INFO  GetContact got params: id = 44
+2019-10-24 15:28:46,012  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:28:46,015  INFO  GetOrganizationList return 2 organizations
+2019-10-24 15:28:46,017  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 15:29:01,933  INFO  GetAllContacts called
+2019-10-24 15:29:01,943  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:29:01,948  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:29:01,955  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:29:01,959  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:29:01,966  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:29:01,971  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:29:01,976  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:29:01,984  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:29:01,988  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:29:01,995  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:29:02,005  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:29:02,009  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:29:02,015  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:29:02,016  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:31:29,647  INFO  GetAllContacts called
+2019-10-24 15:31:29,659  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:31:29,667  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:31:29,672  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:31:29,681  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:31:29,686  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:31:29,691  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:31:29,696  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:31:29,702  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:31:29,706  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:31:29,710  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:31:29,716  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:31:29,721  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:31:29,726  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:31:29,727  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:40:54,314  INFO  GetAllContacts called
+2019-10-24 15:40:54,327  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:40:54,333  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:40:54,341  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:40:54,347  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:40:54,352  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:40:54,358  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:40:54,363  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:40:54,367  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:40:54,371  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:40:54,375  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:40:54,379  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:40:54,384  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:40:54,388  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:40:54,389  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:41:03,196  INFO  GetAllContacts called
+2019-10-24 15:41:03,209  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:41:03,214  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:41:03,218  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:41:03,227  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:41:03,233  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:41:03,237  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:41:03,243  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:41:03,248  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:41:03,252  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:41:03,257  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:41:03,263  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:41:03,269  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:41:03,270  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:41:03,270  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:44:02,657  INFO  GetAllContacts called
+2019-10-24 15:44:02,677  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:44:02,685  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:44:02,693  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:44:02,701  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:44:02,707  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:44:02,714  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:44:02,719  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:44:02,725  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:44:02,731  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:44:02,738  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:44:02,747  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:44:02,752  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:44:02,758  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:44:02,762  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:44:28,575  INFO  GetAllContacts called
+2019-10-24 15:44:28,587  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:44:28,594  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:44:28,601  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:44:28,609  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:44:28,615  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:44:28,624  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:44:28,629  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:44:28,636  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:44:28,643  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:44:28,649  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:44:28,659  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:44:28,665  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:44:28,677  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:44:28,679  INFO  GetAllContacts return 13 contacts
+2019-10-24 15:44:31,628  INFO  GetAllContacts called
+2019-10-24 15:44:31,637  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 15:44:31,642  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 15:44:31,646  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 15:44:31,652  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 15:44:31,658  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 15:44:31,664  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 15:44:31,671  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:44:31,676  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 15:44:31,681  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 15:44:31,687  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 15:44:31,692  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 15:44:31,696  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 15:44:31,700  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 15:44:31,702  INFO  GetAllContacts return 13 contacts
+2019-10-24 16:57:22,343  INFO  GetAllContacts called
+2019-10-24 16:57:22,427  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 16:57:22,444  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 16:57:22,452  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 16:57:22,456  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 16:57:22,464  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 16:57:22,468  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 16:57:22,476  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 16:57:22,480  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 16:57:22,486  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 16:57:22,491  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 16:57:22,496  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 16:57:22,500  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 16:57:22,504  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 16:57:22,612  INFO  GetAllContacts return 13 contacts
+2019-10-24 17:04:35,286  INFO  GetOrganizationList got request
+2019-10-24 17:04:35,318  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 17:04:35,502  INFO  GetOrganizationList return 2 organizations
+2019-10-24 17:05:40,005  INFO  GetContactsByParts got searching params: id = Hbgvfcd
+2019-10-24 17:05:40,005  INFO  Search by one param
+2019-10-24 17:05:40,036  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 17:05:40,036  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 17:05:40,036  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 17:05:40,052  INFO  GetContactsByParts return 3 contacts
+2019-10-24 17:05:43,833  INFO  GetAllContacts called
+2019-10-24 17:05:43,845  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 17:05:43,849  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 17:05:43,857  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 17:05:43,865  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 17:05:43,869  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 17:05:43,877  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 17:05:43,881  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:05:43,889  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:05:43,894  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 17:05:43,894  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 17:05:43,894  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 17:05:43,912  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 17:05:43,917  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 17:05:43,917  INFO  GetAllContacts return 13 contacts
+2019-10-24 17:05:45,341  INFO  GetAllContacts called
+2019-10-24 17:05:45,353  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 17:05:45,361  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 17:05:45,369  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 17:05:45,373  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 17:05:45,381  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 17:05:45,389  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 17:05:45,393  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:05:45,401  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:05:45,410  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 17:05:45,416  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 17:05:45,421  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 17:05:45,429  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 17:05:45,437  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 17:05:45,437  INFO  GetAllContacts return 13 contacts
+2019-10-24 17:15:39,073  INFO  GetAllContacts called
+2019-10-24 17:15:39,097  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 17:15:39,108  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 17:15:39,113  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 17:15:39,124  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 17:15:39,131  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 17:15:39,133  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 17:15:39,133  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:15:39,148  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:15:39,148  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 17:15:39,148  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 17:15:39,164  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 17:15:39,164  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 17:15:39,180  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 17:15:39,180  INFO  GetAllContacts return 13 contacts
+2019-10-24 17:15:42,009  INFO  GetOrganizationList got request
+2019-10-24 17:15:42,017  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 17:15:42,024  INFO  GetOrganizationList return 2 organizations
+2019-10-24 17:15:50,940  INFO  InsertContact got params: name = Sdrftyg, surname = Hbgvfcd, middlename = ,gender = f, birthday = , phone = , taxnumber = 299876, position = , jobid = 1
+2019-10-24 17:15:50,956  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 17:15:50,982  INFO  New contact inserted, 0 Hbgvfcd Sdrftyg  f   299876 random 
+2019-10-24 17:17:05,615  INFO  UpdateContact got params: id = 49, name = Фцыук, surname = Hbgvfcd, middlename = ,gender = f, birthday = , phone = , taxnumber = 299876, position = , jobid = 1
+2019-10-24 17:17:05,621  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 17:17:05,633  INFO  Connection to db Data Source = localhost\MSSQLSERVER03; Initial Catalog = ContactsDB; Integrated Security = SSPI;Pooling = False established
+2019-10-24 17:17:05,646  INFO  Contact updated, 49 Hbgvfcd Фцыук  f   299876 random 
+2019-10-24 17:17:10,179  INFO  GetAllContacts called
+2019-10-24 17:17:10,199  INFO   New result row added, 30 Bnklpo Asdfghj  f  08.10.2019 0:00:00 67890 GDC стажер
+2019-10-24 17:17:10,211  INFO   New result row added, 36 Hbgvfcd Dhgfd  f  12.10.2019 0:00:00 26786789 Navicon аналитик
+2019-10-24 17:17:10,219  INFO   New result row added, 37 Ughbnm Sdrftyg Ijnhtbg m  04.10.2019 0:00:00 987654 GDC дизайнер
+2019-10-24 17:17:10,227  INFO   New result row added, 39 Iopuy Dhgfd  m    GDC 
+2019-10-24 17:17:10,231  INFO   New result row added, 40 Loaw Iogfd  m   299876 Navicon 
+2019-10-24 17:17:10,239  INFO   New result row added, 41 Fgbvdcsx Lkjyhtgrf  f 873467 01.10.2019 0:00:00 565789 GDC ghbjnkm
+2019-10-24 17:17:10,243  INFO   New result row added, 42 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:17:10,251  INFO   New result row added, 43 Ythgrvfcd Dhgfd  f  03.10.2019 0:00:00  Navicon ghbjnkm
+2019-10-24 17:17:10,255  INFO   New result row added, 44 Hbgvfcd Dhgfd  m    Navicon ghbjnkm
+2019-10-24 17:17:10,265  INFO   New result row added, 45 Hbgvfcd Dhgfd  m    GDC аналитик
+2019-10-24 17:17:10,271  INFO   New result row added, 46 Ynhbgfd Test  f  03.10.2019 0:00:00  Navicon 
+2019-10-24 17:17:10,277  INFO   New result row added, 47 Umyjhntbgrfvdcs Hahaa  f  04.10.2019 0:00:00 299876 Navicon 
+2019-10-24 17:17:10,280  INFO   New result row added, 48 Test Test2  f   299876 GDC 
+2019-10-24 17:17:10,280  INFO   New result row added, 49 Hbgvfcd Фцыук  f   299876 Navicon 
+2019-10-24 17:17:10,280  INFO  GetAllContacts return 14 contacts

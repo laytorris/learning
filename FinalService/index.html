@@ -7,8 +7,6 @@
 		 <script src="js/bootstrap.js"></script>
 		 <script src="js/script.js"></script>
 		 <link rel="stylesheet" href="css/bootstrap.css">
-
-
 		
 	 </head>
 	 <body>
@@ -18,15 +16,19 @@
 				<p></p>
 				<div class = "row justify-content-between">
 					<div class = "col-6 justify-content-between">
-					<button type="button" class="col-3 btn btn-outline-primary" data-toggle="modal" data-target="#myModal" onclick="PageActions.OpenAddBlock()">
+					<button type="button" class="col-2 btn btn-outline-primary" data-toggle="modal" data-target="#myModal" onclick="PageActions.OpenAddBlock()">
 						Add new
 					</button>
-					<button type="button" class="col-3  btn btn-outline-primary" data-target="#myModal" onclick="PageActions.OpenEditBlock()">
+					<button type="button" class="col-2  btn btn-outline-primary" data-target="#myModal" onclick="PageActions.OpenEditBlock()">
 						Edit
 					</button>
-					<button type="button" class="col-3  btn btn-outline-primary"  onclick="contactsActions.DeleteContact()">
+					<button type="button" class="col-2  btn btn-outline-primary"  onclick="contactsActions.DeleteContact()">
 						Delete
 					</button>
+					<button type="button" class="col-2  btn btn-outline-primary"  onclick="PageActions.SaveToFile()">
+						Download
+					</button>
+
 				</div>
 				<div class = "col-6 form-inline justify-content-around">
 					<button type="button" id = "showAllButton" class="col-3 btn btn-primary btn-md"  onclick="PageActions.SetDefaultValues()">

@@ -350,7 +350,37 @@ function MainPageActions(){
         document.getElementById('saveButton').onclick = function(){contactsActions.UpdateContact()};
 
      }
-    
+
+     this.HandlePathInput = function(input){
+         return input.value;
+     }
+
+    this.SaveToFile = function(){
+
+        var dataUrl = 'ContactService.svc/SaveToXML';
+            var str =  $("#SearchString").val();
+            $.ajax({
+                type: "POST",
+                url:  dataUrl,
+                data: JSON.stringify({filter:str}),
+                processData: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success : function(data) {
+                    downloadbutton = document.createElement('a');
+                    downloadbutton.id = 'hiddenDownload';
+                    downloadbutton.style.display = 'none';
+                    downloadbutton.setAttribute("href", data.d);
+                    downloadbutton.setAttribute("download", "contacts.xls");
+                    downloadbutton.click();
+                    downloadbutton.remove();
+                    
+               },
+                error: function() {
+                   
+                }
+              })
+        }
      this.SearchContact =  function(){
         var str =  $("#SearchString").val();
         if ((str.length>=3)&&(str.length<=30)){

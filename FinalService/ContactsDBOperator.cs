@@ -29,6 +29,8 @@ namespace FinalService
                 try
                 {
                     int id = (int)insertCommand.ExecuteScalar();
+                    Logger.Log.Info($"New contact inserted, {newcontact.ToString()}");
+                    connection.Close();
                     return id;
                 }
                 catch (SqlException ex)
@@ -36,8 +38,7 @@ namespace FinalService
                     Logger.Log.Info($"SQLCommand failed, {ex.ToString()}");
                     throw new SQLCommandException(ex);
                 }
-                Logger.Log.Info($"New contact inserted, {newcontact.ToString()}");
-                connection.Close();
+             
             }
 
         }
